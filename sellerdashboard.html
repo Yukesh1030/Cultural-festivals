@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Organizer Dashboard | STACKLY Cultural Festivals</title>
+  <!-- CSS Styles -->
+  <link rel="stylesheet" href="style.css">
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body class="dashboard-body">
+
+  <div class="dashboard-layout">
+    <!-- Sidebar Navigation -->
+    <aside class="sidebar">
+      <button class="sidebar-close" id="sidebarClose" style="display:none;"><i data-lucide="x"></i></button>
+      <div class="sidebar-logo"><img src="assets/Stackly Logo.webp" alt="STACKLY" style="height: 40px; width: auto; display: block; margin: 0 auto;"></div>
+      <ul class="sidebar-menu">
+        <li class="sidebar-menu-item active" id="menuOverview">
+          <a href="sellerdashboard.html"><i data-lucide="layout-dashboard"></i> Overview</a>
+        </li>
+        <li class="sidebar-menu-item" id="menuManage">
+          <a href="404.html"><i data-lucide="folder-open"></i> Manage Events</a>
+        </li>
+        <li class="sidebar-menu-item" id="menuParticipants">
+          <a href="404.html"><i data-lucide="users"></i> Participant List</a>
+        </li>
+        <li class="sidebar-menu-item" id="menuTickets">
+          <a href="404.html"><i data-lucide="credit-card"></i> Ticket Sales</a>
+        </li>
+      </ul>
+      <div class="sidebar-logout">
+        <a href="#" id="logoutLink"><i data-lucide="log-out"></i> Logout</a>
+      </div>
+    </aside>
+
+    <!-- Mobile Header -->
+    <div class="mobile-dashboard-header">
+      <div class="sidebar-logo" style="margin-bottom: 0;"><img src="assets/Stackly Logo.webp" alt="STACKLY" style="height: 32px; width: auto;"></div>
+      <button class="mobile-menu-toggle" id="mobileMenuToggle">
+        <i data-lucide="menu"></i>
+      </button>
+    </div>
+
+    <!-- Main Dashboard Area -->
+    <main class="dashboard-main">
+      <header class="dashboard-header">
+        <div>
+          <h1 style="font-size: 1.85rem; font-weight:700; color:var(--dark-color);" id="welcomeUser">Welcome Back, Event Organizer</h1>
+          <p style="color:var(--text-muted); font-size:0.95rem;">Manage listings, track ticket sales, and approve volunteer registrations.</p>
+        </div>
+        <div class="dashboard-user-profile">
+          <div class="dashboard-user-avatar" id="avatarName">EO</div>
+          <span style="font-weight:600; color:var(--dark-color);" id="usernameDisplay">organizer@stackly.com</span>
+        </div>
+      </header>
+
+      <!-- Quick Stats Row -->
+      <div class="dashboard-stats">
+        
+        <div class="dashboard-stat-card">
+          <div class="dashboard-stat-icon" style="background-color:#fee2e2; color:var(--primary-color);"><i data-lucide="list-video"></i></div>
+          <div class="dashboard-stat-info">
+            <h3>Event Listings</h3>
+            <div class="dashboard-stat-value">4 Listings</div>
+          </div>
+        </div>
+
+        <div class="dashboard-stat-card">
+          <div class="dashboard-stat-icon" style="background-color:#fef9c3; color:#a16207;"><i data-lucide="users"></i></div>
+          <div class="dashboard-stat-info">
+            <h3>Attendees Registered</h3>
+            <div class="dashboard-stat-value">245 Enrolled</div>
+          </div>
+        </div>
+
+        <div class="dashboard-stat-card">
+          <div class="dashboard-stat-icon" style="background-color:#dbeafe; color:#1e40af;"><i data-lucide="hand-helping"></i></div>
+          <div class="dashboard-stat-info">
+            <h3>Volunteers Active</h3>
+            <div class="dashboard-stat-value">38 Active</div>
+          </div>
+        </div>
+
+        <div class="dashboard-stat-card">
+          <div class="dashboard-stat-icon" style="background-color:#dcfce7; color:#15803d;"><i data-lucide="dollar-sign"></i></div>
+          <div class="dashboard-stat-info">
+            <h3>Ticket Revenue</h3>
+            <div class="dashboard-stat-value">$1,450.00</div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Main Dashboard Grid -->
+      <div class="dashboard-grid">
+        <!-- Quick Controls Panel -->
+        <div class="dashboard-panel reveal-left active">
+          <div class="dashboard-panel-header">
+            <h2 class="dashboard-panel-title">Organizer Controls</h2>
+          </div>
+
+          <div class="dashboard-controls">
+            <!-- Control 1 -->
+            <div class="control-item active">
+              <div class="control-info">
+                <i data-lucide="shield-check" class="control-icon" style="color: var(--accent-color);"></i>
+                <span class="control-label">Registration Entries</span>
+              </div>
+              <label class="scenario-toggle">
+                <input type="checkbox" checked class="device-toggle" data-device="Registration Entries">
+                <span class="slider"></span>
+              </label>
+            </div>
+
+            <!-- Control 2 -->
+            <div class="control-item">
+              <div class="control-info">
+                <i data-lucide="radio" class="control-icon"></i>
+                <span class="control-label">Live Broadcast Stream</span>
+              </div>
+              <label class="scenario-toggle">
+                <input type="checkbox" class="device-toggle" data-device="Live Broadcast Stream">
+                <span class="slider"></span>
+              </label>
+            </div>
+
+            <!-- Control 3 -->
+            <div class="control-item active">
+              <div class="control-info">
+                <i data-lucide="user-plus" class="control-icon" style="color: var(--accent-color);"></i>
+                <span class="control-label">Volunteer Intake Forms</span>
+              </div>
+              <label class="scenario-toggle">
+                <input type="checkbox" checked class="device-toggle" data-device="Volunteer Intake Forms">
+                <span class="slider"></span>
+              </label>
+            </div>
+          </div>
+        </div>
+
+        <!-- System Notifications -->
+        <div class="dashboard-panel reveal-right active">
+          <div class="dashboard-panel-header">
+            <h2 class="dashboard-panel-title">System Status</h2>
+          </div>
+
+          <div style="display:flex; flex-direction:column; gap:1.25rem;">
+            <div style="background-color: var(--light-color); border-left: 4px solid var(--primary-color); padding: 1rem; border-radius: 4px;">
+              <h4 style="font-weight:600; font-size:0.9rem; margin-bottom:0.25rem;">Vendor Request Pending</h4>
+              <p style="font-size:0.8rem; color:var(--text-muted);">Heritage Food Fair food vendor signup requests approval review.</p>
+            </div>
+
+            <div style="background-color: var(--light-color); border-left: 4px solid #10B981; padding: 1rem; border-radius: 4px;">
+              <h4 style="font-weight:600; font-size:0.9rem; margin-bottom:0.25rem;">Ticket Milestone Achieved</h4>
+              <p style="font-size:0.8rem; color:var(--text-muted);">Congratulations! Over 200 passes sold for the Folk Concert event.</p>
+            </div>
+
+            <div style="background-color: var(--light-color); border-left: 4px solid #F59E0B; padding: 1rem; border-radius: 4px;">
+              <h4 style="font-weight:600; font-size:0.9rem; margin-bottom:0.25rem;">Volunteer Intake Notice</h4>
+              <p style="font-size:0.8rem; color:var(--text-muted);">Five new volunteer registrations received from university communities.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+  </div>
+
+  <!-- Sidebar Overlay -->
+  <div class="sidebar-overlay" id="sidebarOverlay"></div>
+
+  <!-- Scripts -->
+  <script src="main.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      // Session Validation
+      if (localStorage.getItem('stackly_logged_in') !== 'true') {
+        window.location.replace('login.html');
+      }
+
+      // Display User details from registration session
+      const registeredName = localStorage.getItem('stackly_registered_name') || 'Event Organizer';
+      const userDisplay = document.getElementById('usernameDisplay');
+      const avatarName = document.getElementById('avatarName');
+      const welcomeUser = document.getElementById('welcomeUser');
+      
+      if (userDisplay) userDisplay.innerText = registeredName;
+      if (welcomeUser) welcomeUser.innerText = `Welcome Back, ${registeredName}`;
+      if (avatarName) {
+        const initials = registeredName.split(' ').map(n => n[0]).join('').toUpperCase().substring(0,2);
+        avatarName.innerText = initials || 'EO';
+      }
+
+      // Quick Device Toggles
+      const devToggles = document.querySelectorAll('.device-toggle');
+      devToggles.forEach(toggle => {
+        toggle.addEventListener('change', () => {
+          const item = toggle.closest('.control-item');
+          const devName = toggle.getAttribute('data-device');
+          if (toggle.checked) {
+            item.classList.add('active');
+            item.querySelector('.control-icon').style.color = 'var(--accent-color)';
+            showToast(`${devName} is now ENABLED`);
+          } else {
+            item.classList.remove('active');
+            item.querySelector('.control-icon').style.color = '';
+            showToast(`${devName} is now DISABLED`);
+          }
+        });
+      });
+
+      // Logout handler
+      const logoutLink = document.getElementById('logoutLink');
+      if (logoutLink) {
+        logoutLink.addEventListener('click', (e) => {
+          e.preventDefault();
+          localStorage.removeItem('stackly_logged_in');
+          localStorage.removeItem('stackly_user_role');
+          localStorage.removeItem('stackly_user_email');
+          window.location.replace('login.html');
+        });
+      }
+    });
+  </script>
+</body>
+</html>

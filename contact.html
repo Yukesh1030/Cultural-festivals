@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact | STACKLY Cultural Festivals</title>
+  <meta name="description" content="Get in touch with us, register for cultural events, browse FAQs, and subscribe to our newsletter.">
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="style.css">
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body>
+
+  <!-- Common Header / Navbar -->
+  <header class="header">
+    <div class="container header-container">
+      <a href="index.html" class="logo-link">
+        <img src="assets/Stackly Logo.webp" alt="STACKLY Logo" class="logo-img">
+      </a>
+      
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="festivals.html">Festivals</a></li>
+        <li><a href="traditions.html">Traditions</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+        <li class="active"><a href="contact.html">Contact</a></li>
+        <li class="mobile-only"><a href="login.html" class="nav-btn" style="display: inline-block; margin-top: 1rem;">Login</a></li>
+      </ul>
+
+      <a href="login.html" class="nav-btn">Login</a>
+
+      <button class="menu-toggle">
+        <i data-lucide="menu"></i>
+      </button>
+    </div>
+  </header>
+
+  <!-- 1. Banner Section -->
+  <section class="banner-section" style="--bg-image: url('assets/Cover photo.webp'); --bg-overlay: linear-gradient(rgba(139, 0, 0, 0.8), rgba(139, 0, 0, 0.8)); padding: 8rem 0 5rem 0; text-align: center; color: white;">
+    <div class="container">
+      <h1 class="reveal-up active" style="font-size: 3rem; font-family: var(--font-title); margin-bottom: 1rem;">Get In Touch</h1>
+      <p class="reveal-up active" style="font-size: 1.1rem; color: rgba(255,255,255,0.9); max-width: 600px; margin: 0 auto;">
+        Have questions about upcoming events? Want to volunteer or list a festival? We are here to help.
+      </p>
+    </div>
+  </section>
+
+  <!-- 2 & 3. Contact Info & Contact Form Row -->
+  <section class="contact-section">
+    <div class="container">
+      <div class="contact-grid" style="align-items: start;">
+        
+        <!-- 2. Contact Information -->
+        <div class="reveal-left" style="background: white; border-radius: var(--border-radius); padding: 2.5rem; border: 1px solid var(--border-color); box-shadow: var(--shadow-sm);">
+          <h3 style="font-size: 1.5rem; margin-bottom: 1.5rem; color: var(--primary-color);">Contact Information</h3>
+          <p style="color: var(--text-muted); font-size: 0.95rem; margin-bottom: 2rem; line-height: 1.7;">
+            Feel free to reach out directly via email, phone, or by visiting our global office plaza.
+          </p>
+
+          <div style="display: flex; flex-direction: column; gap: 1.5rem;">
+            
+            <div style="display: flex; gap: 1rem; align-items: flex-start;">
+              <div style="color: var(--accent-color); padding: 0.5rem; background: #fff5f2; border-radius: 8px;"><i data-lucide="mail"></i></div>
+              <div>
+                <h4 style="font-size: 0.85rem; text-transform: uppercase; color: var(--text-muted); font-weight: 600; letter-spacing: 0.5px;">Email Address</h4>
+                <p style="font-weight: 500; font-size: 1rem;">support@stackly.com</p>
+              </div>
+            </div>
+
+            <div style="display: flex; gap: 1rem; align-items: flex-start;">
+              <div style="color: var(--accent-color); padding: 0.5rem; background: #fff5f2; border-radius: 8px;"><i data-lucide="phone"></i></div>
+              <div>
+                <h4 style="font-size: 0.85rem; text-transform: uppercase; color: var(--text-muted); font-weight: 600; letter-spacing: 0.5px;">Phone Number</h4>
+                <p style="font-weight: 500; font-size: 1rem;">+91 98765 43210</p>
+              </div>
+            </div>
+
+            <div style="display: flex; gap: 1rem; align-items: flex-start;">
+              <div style="color: var(--accent-color); padding: 0.5rem; background: #fff5f2; border-radius: 8px;"><i data-lucide="map-pin"></i></div>
+              <div>
+                <h4 style="font-size: 0.85rem; text-transform: uppercase; color: var(--text-muted); font-weight: 600; letter-spacing: 0.5px;">Office Plaza</h4>
+                <p style="font-weight: 500; font-size: 1rem; line-height: 1.5;">12 Heritage Road,<br>Cultural Plaza, Delhi, India</p>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- 3. Contact Form -->
+        <div class="reveal-right" style="background: white; border-radius: var(--border-radius); padding: 3rem; border: 1px solid var(--border-color); box-shadow: var(--shadow-sm);">
+          <h3 style="font-size: 1.5rem; margin-bottom: 1.5rem; color: var(--primary-color);">Send Us A Message</h3>
+          
+          <form id="contactForm" style="display: flex; flex-direction: column; gap: 1.25rem;">
+            
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1.25rem;">
+              <div>
+                <label style="display: block; font-size: 0.85rem; font-weight: 500; margin-bottom: 0.5rem; color: var(--text-color);">Your Name</label>
+                <input type="text" placeholder="John Doe" required style="width:100%; padding:0.8rem; border-radius:6px; border:1px solid var(--border-color); outline:none; font-family:var(--font-body); font-size:0.9rem;">
+              </div>
+              <div>
+                <label style="display: block; font-size: 0.85rem; font-weight: 500; margin-bottom: 0.5rem; color: var(--text-color);">Email Address</label>
+                <input type="email" placeholder="you@example.com" required style="width:100%; padding:0.8rem; border-radius:6px; border:1px solid var(--border-color); outline:none; font-family:var(--font-body); font-size:0.9rem;">
+              </div>
+            </div>
+
+            <div>
+              <label style="display: block; font-size: 0.85rem; font-weight: 500; margin-bottom: 0.5rem; color: var(--text-color);">Subject</label>
+              <input type="text" placeholder="How can we help you?" required style="width:100%; padding:0.8rem; border-radius:6px; border:1px solid var(--border-color); outline:none; font-family:var(--font-body); font-size:0.9rem;">
+            </div>
+
+            <div>
+              <label style="display: block; font-size: 0.85rem; font-weight: 500; margin-bottom: 0.5rem; color: var(--text-color);">Message</label>
+              <textarea placeholder="Write your message here..." required rows="5" style="width:100%; padding:0.8rem; border-radius:6px; border:1px solid var(--border-color); outline:none; font-family:var(--font-body); font-size:0.9rem; resize:vertical;"></textarea>
+            </div>
+
+            <button type="submit" class="btn btn-primary" style="margin-top: 1rem; align-self: flex-start; padding: 0.8rem 2rem;">Send Message <i data-lucide="send" style="width:16px;"></i></button>
+
+          </form>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- 4. Event Registration Section -->
+  <section class="registration-section" style="background-color: #fdf6ee; border-top: 1px solid var(--border-color);">
+    <div class="container" style="max-width: 800px;">
+      <div class="section-header reveal-up">
+        <span class="section-tag">Book A Slot</span>
+        <h2 class="section-title">Event Registration</h2>
+        <p class="section-desc">Register for our upcoming cultural workshops, culinary classes, and music events.</p>
+      </div>
+
+      <div class="reveal-zoom-in" style="background: white; padding: 3.5rem; border-radius: var(--border-radius); border: 1px solid var(--border-color); box-shadow: var(--shadow-sm);">
+        <form id="registerForm" style="display: flex; flex-direction: column; gap: 1.5rem;">
+          
+          <div class="form-row">
+            <div>
+              <label style="display: block; font-size: 0.85rem; font-weight: 500; margin-bottom: 0.5rem;">Attendee Name</label>
+              <input type="text" placeholder="John Doe" required style="width:100%; padding:0.85rem; border-radius:6px; border:1px solid var(--border-color); font-family:var(--font-body); font-size:0.9rem;">
+            </div>
+            <div>
+              <label style="display: block; font-size: 0.85rem; font-weight: 500; margin-bottom: 0.5rem;">Email Address</label>
+              <input type="email" placeholder="you@example.com" required style="width:100%; padding:0.85rem; border-radius:6px; border:1px solid var(--border-color); font-family:var(--font-body); font-size:0.9rem;">
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div>
+              <label style="display: block; font-size: 0.85rem; font-weight: 500; margin-bottom: 0.5rem;">Select Event</label>
+              <select required style="width:100%; padding:0.85rem; border-radius:6px; border:1px solid var(--border-color); font-family:var(--font-body); font-size:0.9rem;">
+                <option value="dance">Cultural Dance Festival</option>
+                <option value="food">Heritage Food Fair</option>
+                <option value="music">Folk Music Concert</option>
+                <option value="crafts">Art & Craft Exhibition</option>
+              </select>
+            </div>
+            <div>
+              <label style="display: block; font-size: 0.85rem; font-weight: 500; margin-bottom: 0.5rem;">Number of Passes</label>
+              <input type="number" min="1" max="10" value="1" required style="width:100%; padding:0.85rem; border-radius:6px; border:1px solid var(--border-color); font-family:var(--font-body); font-size:0.9rem;">
+            </div>
+          </div>
+
+          <button type="submit" class="btn btn-accent" style="margin-top: 1rem; width:100%; padding: 1rem;">Confirm Registration <i data-lucide="check-circle" style="width:18px;"></i></button>
+
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- 5. Frequently Asked Questions (FAQ Accordions) -->
+  <section class="faq-section" style="background-color: white; border-top: 1px solid var(--border-color);">
+    <div class="container" style="max-width: 900px;">
+      <div class="section-header reveal-up">
+        <span class="section-tag">Help Desk</span>
+        <h2 class="section-title">Frequently Asked Questions</h2>
+        <p class="section-desc">Quick answers to common visitor queries regarding tickets, dates, and locations.</p>
+      </div>
+
+      <div class="reveal-up" style="display: flex; flex-direction: column; gap: 1rem;">
+        
+        <!-- FAQ 1 -->
+        <div class="faq-item" style="border: 1px solid var(--border-color); border-radius: 8px; overflow: hidden; background: var(--light-color);">
+          <div class="faq-header" style="padding: 1.25rem 1.5rem; display: flex; justify-content: space-between; align-items: center; cursor: pointer; font-weight: 600; font-size: 1.05rem;">
+            <span>Are the events free to attend?</span>
+            <i data-lucide="chevron-down" style="transition: transform 0.3s;"></i>
+          </div>
+          <div class="faq-content" style="height: 0; overflow: hidden; transition: height 0.3s ease-in-out;">
+            <p style="padding: 0 1.5rem 1.5rem 1.5rem; color: var(--text-muted); font-size: 0.95rem; line-height: 1.6;">
+              Most cultural highlight exhibitions and folk dances are free for public attendees. However, culinary classes and concerts require paid passes to support local heritage craftsmen.
+            </p>
+          </div>
+        </div>
+
+        <!-- FAQ 2 -->
+        <div class="faq-item" style="border: 1px solid var(--border-color); border-radius: 8px; overflow: hidden; background: var(--light-color);">
+          <div class="faq-header" style="padding: 1.25rem 1.5rem; display: flex; justify-content: space-between; align-items: center; cursor: pointer; font-weight: 600; font-size: 1.05rem;">
+            <span>How can I register as a festival organizer?</span>
+            <i data-lucide="chevron-down" style="transition: transform 0.3s;"></i>
+          </div>
+          <div class="faq-content" style="height: 0; overflow: hidden; transition: height 0.3s ease-in-out;">
+            <p style="padding: 0 1.5rem 1.5rem 1.5rem; color: var(--text-muted); font-size: 0.95rem; line-height: 1.6;">
+              You can sign up for an account, select the "Event Organizer" role, and access the dedicated panel where you can list events, track volunteers, and manage ticket check-ins.
+            </p>
+          </div>
+        </div>
+
+        <!-- FAQ 3 -->
+        <div class="faq-item" style="border: 1px solid var(--border-color); border-radius: 8px; overflow: hidden; background: var(--light-color);">
+          <div class="faq-header" style="padding: 1.25rem 1.5rem; display: flex; justify-content: space-between; align-items: center; cursor: pointer; font-weight: 600; font-size: 1.05rem;">
+            <span>Where are the events hosted?</span>
+            <i data-lucide="chevron-down" style="transition: transform 0.3s;"></i>
+          </div>
+          <div class="faq-content" style="height: 0; overflow: hidden; transition: height 0.3s ease-in-out;">
+            <p style="padding: 0 1.5rem 1.5rem 1.5rem; color: var(--text-muted); font-size: 0.95rem; line-height: 1.6;">
+              Our physical events are hosted across heritage complexes and cultural plaza grounds as listed in the monthly calendar. Check your registration pass for precise maps.
+            </p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- 6. Newsletter Subscription (Handled by main.js with toast alert) -->
+  <section class="newsletter-section" style="background-color: var(--primary-color); color: white; padding: 5rem 0; border-top: 1px solid var(--secondary-color);">
+    <div class="container" style="max-width: 700px; text-align: center;">
+      <h2 class="reveal-up" style="font-size: 2.25rem; color: white; margin-bottom: 0.75rem; font-family: var(--font-title);">Subscribe to Our Newsletters</h2>
+      <p class="reveal-up" style="color: rgba(255,255,255,0.9); margin-bottom: 2rem; font-size: 1rem;">Receive updates about upcoming festivals, traditional crafts tutorials, and special community workshops directly in your inbox.</p>
+      
+      <form class="newsletter-form reveal-zoom-in" id="newsletterForm" style="max-width: 500px; margin: 0 auto; position: relative;">
+        <input type="email" placeholder="Enter your email address" class="newsletter-input" required style="padding: 1rem 4rem 1rem 1.5rem; font-size: 0.95rem; border-radius: 50px;">
+        <button type="submit" class="newsletter-submit" style="width: 38px; height: 38px; top: 6px; right: 6px;"><i data-lucide="send" style="width: 18px; height: 18px;"></i></button>
+      </form>
+    </div>
+  </section>
+
+  <!-- Common Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        
+        <!-- Col 1: Brand -->
+        <div class="footer-col">
+          <a href="index.html" class="logo-link" style="margin-bottom: 1.5rem; display: inline-block;">
+            <img src="assets/Stackly Logo.webp" alt="STACKLY" style="height: 44px; width: auto;">
+          </a>
+          <p class="footer-desc">A premium global hub dedicated to celebrating cultural diversity, keeping age-old traditions alive, and fostering community harmony.</p>
+          <div class="social-links">
+            <a href="404.html" class="social-icon"><img src="assets/facebook.webp" alt="Facebook"></a>
+            <a href="404.html" class="social-icon"><img src="assets/twitter.webp" alt="Twitter"></a>
+            <a href="404.html" class="social-icon"><img src="assets/instagram.webp" alt="Instagram"></a>
+            <a href="404.html" class="social-icon"><img src="assets/linkedin.webp" alt="LinkedIn"></a>
+          </div>
+        </div>
+
+        <!-- Col 2: Navigation Links -->
+        <div class="footer-col">
+          <h3>Quick Links</h3>
+          <ul class="footer-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="festivals.html">Festivals</a></li>
+            <li><a href="traditions.html">Traditions</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 3: Contact Info -->
+        <div class="footer-col">
+          <h3>Contact Info</h3>
+          <div class="footer-contact-item">
+            <i data-lucide="map-pin" style="width:20px; height:20px;"></i>
+            <span>12 Heritage Road, Cultural Plaza, India</span>
+          </div>
+          <div class="footer-contact-item">
+            <i data-lucide="phone" style="width:20px; height:20px;"></i>
+            <span>+91 98765 43210</span>
+          </div>
+          <div class="footer-contact-item">
+            <i data-lucide="mail" style="width:20px; height:20px;"></i>
+            <span>support@stackly.com</span>
+          </div>
+        </div>
+
+        <!-- Col 4: Newsletter -->
+        <div class="footer-col">
+          <h3>Newsletter</h3>
+          <p style="font-size: 0.9rem; margin-bottom: 1rem;">Subscribe to get monthly updates about global cultural celebrations and events.</p>
+          <form class="newsletter-form" id="newsletterFormSub">
+            <input type="email" placeholder="Your email address" class="newsletter-input" required>
+            <button type="submit" class="newsletter-submit"><i data-lucide="send" style="width:16px; height:16px;"></i></button>
+          </form>
+        </div>
+
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; 2026 STACKLY Cultural Festivals. All Rights Reserved.</p>
+        <p><a href="404.html" style="margin-right: 1rem;">Privacy Policy</a> | <a href="404.html">Terms of Service</a></p>
+      </div>
+    </div>
+  </footer>
+
+  <div id="toastContainer"></div>
+
+  <!-- Scripts -->
+  <script src="main.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      // Small local override for footer newsletter form
+      const footerForm = document.getElementById('newsletterFormSub');
+      if (footerForm) {
+        footerForm.addEventListener('submit', (e) => {
+          e.preventDefault();
+          const emailInput = footerForm.querySelector('input[type="email"]');
+          if (emailInput && emailInput.value.trim() !== '') {
+            showToast("Successfully subscribed to cultural newsletters!");
+            emailInput.value = '';
+          }
+        });
+      }
+    });
+  </script>
+</body>
+</html>

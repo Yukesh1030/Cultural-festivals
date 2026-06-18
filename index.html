@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Home | STACKLY Cultural Festivals</title>
+  <meta name="description" content="Discover vibrant festivals, traditions, music, dance, and customs from communities across the globe.">
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="style.css">
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body>
+
+  <!-- Common Header / Navbar -->
+  <header class="header">
+    <div class="container header-container">
+      <a href="index.html" class="logo-link">
+        <img src="assets/Stackly Logo.webp" alt="STACKLY Logo" class="logo-img">
+      </a>
+      
+      <ul class="nav-links">
+        <li class="active"><a href="index.html">Home</a></li>
+        <li><a href="festivals.html">Festivals</a></li>
+        <li><a href="traditions.html">Traditions</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li class="mobile-only"><a href="login.html" class="nav-btn" style="display: inline-block; margin-top: 1rem;">Login</a></li>
+      </ul>
+
+      <a href="login.html" class="nav-btn">Login</a>
+
+      <button class="menu-toggle">
+        <i data-lucide="menu"></i>
+      </button>
+    </div>
+  </header>
+
+  <!-- 1. Hero Section -->
+  <section class="hero-section" style="--bg-image: url('assets/Cover photo.webp'); --bg-overlay: linear-gradient(rgba(26, 13, 13, 0.75), rgba(26, 13, 13, 0.75)); min-height: 100vh; display: flex; align-items: center; justify-content: center; text-align: center; color: white; padding-top: 100px;">
+    <div class="container" style="max-width: 850px;">
+      <h1 class="hero-title" style="font-size: clamp(2.5rem, 5vw, 4.5rem); font-weight: 800; color: #fff; margin-bottom: 1.5rem; line-height: 1.2;">
+        Celebrating Cultures,<br><span style="color: var(--secondary-color);">Preserving Traditions</span>
+      </h1>
+      <p class="hero-text" style="font-size: clamp(1rem, 2vw, 1.25rem); color: rgba(255, 255, 255, 0.9); margin-bottom: 2.5rem; line-height: 1.8;">
+        Discover the vibrant festivals, traditions, music, dance, and customs that unite communities across the globe. Explore cultural celebrations that have been passed down through generations.
+      </p>
+      <div class="hero-buttons" style="display: flex; justify-content: center; gap: 1.5rem; flex-wrap: wrap;">
+        <a href="404.html" class="btn btn-primary" style="padding: 1rem 2.5rem;">Explore Festivals</a>
+        <a href="404.html" class="btn btn-secondary" style="padding: 1rem 2.5rem;">Join Events</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- 2. About Section -->
+  <section class="about-section">
+    <div class="container">
+      <div class="section-header reveal-up">
+        <span class="section-tag">About Cultural Festivals</span>
+        <h2 class="section-title">Keeping Heritage Alive</h2>
+      </div>
+      <div class="reveal-up" style="max-width: 800px; margin: 0 auto; text-align: center;">
+        <p style="font-size: 1.2rem; line-height: 2; color: var(--text-color); font-weight: 400;">
+          Cultural festivals are more than celebrations; they are expressions of history, identity, and community spirit. They bring people together to honor traditions through music, dance, food, art, and storytelling.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- 3. Featured Festivals -->
+  <section class="featured-festivals" style="background-color: #f6efe9;">
+    <div class="container">
+      <div class="section-header reveal-up">
+        <span class="section-tag">Featured Festivals</span>
+        <h2 class="section-title">Rich Cultural Legends</h2>
+        <p class="section-desc">Explore some of the most celebrated festivals known for their rich traditions and cultural significance.</p>
+      </div>
+      
+      <div class="responsive-grid-4">
+        
+        <!-- Pongal -->
+        <div class="hover-zoom-card reveal-up" style="background: white; border-radius: var(--border-radius); box-shadow: var(--shadow-sm); overflow: hidden; border: 1px solid var(--border-color);">
+          <div style="overflow: hidden; height: 200px;">
+            <img src="assets/Pongal.webp" alt="Pongal Festival" style="width: 100%; height: 100%; object-fit: cover;">
+          </div>
+          <div style="padding: 1.5rem;">
+            <h3 style="font-size: 1.35rem; margin-bottom: 0.5rem; color: var(--primary-color);">Pongal</h3>
+            <p style="color: var(--text-muted); font-size: 0.9rem; margin-bottom: 1rem;">A vibrant harvest festival of South India, dedicated to thanking the sun god for crop bounty.</p>
+            <a href="festivals.html" style="font-weight: 600; font-size: 0.9rem; color: var(--accent-color); display: flex; align-items: center; gap: 0.25rem;">Learn More <i data-lucide="arrow-right" style="width:16px;"></i></a>
+          </div>
+        </div>
+
+        <!-- Diwali -->
+        <div class="hover-zoom-card reveal-up" style="background: white; border-radius: var(--border-radius); box-shadow: var(--shadow-sm); overflow: hidden; border: 1px solid var(--border-color);">
+          <div style="overflow: hidden; height: 200px;">
+            <img src="assets/Diwali.webp" alt="Diwali Festival" style="width: 100%; height: 100%; object-fit: cover;">
+          </div>
+          <div style="padding: 1.5rem;">
+            <h3 style="font-size: 1.35rem; margin-bottom: 0.5rem; color: var(--primary-color);">Diwali</h3>
+            <p style="color: var(--text-muted); font-size: 0.9rem; margin-bottom: 1rem;">The glorious festival of lights, celebrating the victory of light over darkness and good over evil.</p>
+            <a href="festivals.html" style="font-weight: 600; font-size: 0.9rem; color: var(--accent-color); display: flex; align-items: center; gap: 0.25rem;">Learn More <i data-lucide="arrow-right" style="width:16px;"></i></a>
+          </div>
+        </div>
+
+        <!-- Navratri -->
+        <div class="hover-zoom-card reveal-up" style="background: white; border-radius: var(--border-radius); box-shadow: var(--shadow-sm); overflow: hidden; border: 1px solid var(--border-color);">
+          <div style="overflow: hidden; height: 200px;">
+            <img src="assets/Navrathri.webp" alt="Navratri Festival" style="width: 100%; height: 100%; object-fit: cover;">
+          </div>
+          <div style="padding: 1.5rem;">
+            <h3 style="font-size: 1.35rem; margin-bottom: 0.5rem; color: var(--primary-color);">Navratri</h3>
+            <p style="color: var(--text-muted); font-size: 0.9rem; margin-bottom: 1rem;">Nine nights of devotion, music, and colorful Garba dances, honoring the feminine divine forces.</p>
+            <a href="festivals.html" style="font-weight: 600; font-size: 0.9rem; color: var(--accent-color); display: flex; align-items: center; gap: 0.25rem;">Learn More <i data-lucide="arrow-right" style="width:16px;"></i></a>
+          </div>
+        </div>
+
+        <!-- Onam -->
+        <div class="hover-zoom-card reveal-up" style="background: white; border-radius: var(--border-radius); box-shadow: var(--shadow-sm); overflow: hidden; border: 1px solid var(--border-color);">
+          <div style="overflow: hidden; height: 200px;">
+            <img src="assets/Onam festival.webp" alt="Onam Festival" style="width: 100%; height: 100%; object-fit: cover;">
+          </div>
+          <div style="padding: 1.5rem;">
+            <h3 style="font-size: 1.35rem; margin-bottom: 0.5rem; color: var(--primary-color);">Onam</h3>
+            <p style="color: var(--text-muted); font-size: 0.9rem; margin-bottom: 1rem;">Kerala's grand national harvest festival, marked by flower carpets, boat races, and rich feasts.</p>
+            <a href="festivals.html" style="font-weight: 600; font-size: 0.9rem; color: var(--accent-color); display: flex; align-items: center; gap: 0.25rem;">Learn More <i data-lucide="arrow-right" style="width:16px;"></i></a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- 4. Cultural Highlights -->
+  <section class="cultural-highlights">
+    <div class="container">
+      <div class="section-header reveal-up">
+        <span class="section-tag">Key Dimensions</span>
+        <h2 class="section-title">Cultural Highlights</h2>
+      </div>
+
+      <div class="responsive-grid-3">
+        
+        <!-- Highlight 1 -->
+        <div class="reveal-left" style="display: flex; gap: 1.25rem; background: #fff; padding: 2rem; border-radius: var(--border-radius); border-left: 5px solid var(--primary-color); box-shadow: var(--shadow-sm);">
+          <div style="color: var(--accent-color);"><i data-lucide="music" style="width: 32px; height: 32px;"></i></div>
+          <div>
+            <h3 style="font-size: 1.25rem; margin-bottom: 0.5rem;">Traditional Music</h3>
+            <p style="color: var(--text-muted); font-size: 0.95rem;">Captivating melodies and native instruments carrying the auditory legacy of our ancestors.</p>
+          </div>
+        </div>
+
+        <!-- Highlight 2 -->
+        <div class="reveal-right" style="display: flex; gap: 1.25rem; background: #fff; padding: 2rem; border-radius: var(--border-radius); border-left: 5px solid var(--accent-color); box-shadow: var(--shadow-sm);">
+          <div style="color: var(--primary-color);"><i data-lucide="users" style="width: 32px; height: 32px;"></i></div>
+          <div>
+            <h3 style="font-size: 1.25rem; margin-bottom: 0.5rem;">Folk Dance</h3>
+            <p style="color: var(--text-muted); font-size: 0.95rem;">Rhythmic patterns and energetic performances depicting historical folk narratives and folklore.</p>
+          </div>
+        </div>
+
+        <!-- Highlight 3 -->
+        <div class="reveal-left" style="display: flex; gap: 1.25rem; background: #fff; padding: 2rem; border-radius: var(--border-radius); border-left: 5px solid var(--secondary-color); box-shadow: var(--shadow-sm);">
+          <div style="color: var(--primary-color);"><i data-lucide="cooking-pot" style="width: 32px; height: 32px;"></i></div>
+          <div>
+            <h3 style="font-size: 1.25rem; margin-bottom: 0.5rem;">Regional Cuisine</h3>
+            <p style="color: var(--text-muted); font-size: 0.95rem;">Traditional culinary techniques and signature recipes served during community festivals.</p>
+          </div>
+        </div>
+
+        <!-- Highlight 4 -->
+        <div class="reveal-right" style="display: flex; gap: 1.25rem; background: #fff; padding: 2rem; border-radius: var(--border-radius); border-left: 5px solid var(--primary-color); box-shadow: var(--shadow-sm);">
+          <div style="color: var(--accent-color);"><i data-lucide="palette" style="width: 32px; height: 32px;"></i></div>
+          <div>
+            <h3 style="font-size: 1.25rem; margin-bottom: 0.5rem;">Handicrafts</h3>
+            <p style="color: var(--text-muted); font-size: 0.95rem;">Exquisite hand-carved decor, weaving, and sculpting preserved by native local craftsmen.</p>
+          </div>
+        </div>
+
+        <!-- Highlight 5 -->
+        <div class="reveal-left" style="display: flex; gap: 1.25rem; background: #fff; padding: 2rem; border-radius: var(--border-radius); border-left: 5px solid var(--accent-color); box-shadow: var(--shadow-sm);">
+          <div style="color: var(--primary-color);"><i data-lucide="sparkles" style="width: 32px; height: 32px;"></i></div>
+          <div>
+            <h3 style="font-size: 1.25rem; margin-bottom: 0.5rem;">Rituals & Ceremonies</h3>
+            <p style="color: var(--text-muted); font-size: 0.95rem;">Sacred ceremonies and customary values celebrating agricultural harvests and spiritual milestones.</p>
+          </div>
+        </div>
+
+        <!-- Highlight 6 -->
+        <div class="reveal-right" style="display: flex; gap: 1.25rem; background: #fff; padding: 2rem; border-radius: var(--border-radius); border-left: 5px solid var(--secondary-color); box-shadow: var(--shadow-sm);">
+          <div style="color: var(--accent-color);"><i data-lucide="shirt" style="width: 32px; height: 32px;"></i></div>
+          <div>
+            <h3 style="font-size: 1.25rem; margin-bottom: 0.5rem;">Traditional Attire</h3>
+            <p style="color: var(--text-muted); font-size: 0.95rem;">Intricately stitched apparel, regional silhouettes, and ceremonial robes worn during events.</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- 5. Upcoming Events -->
+  <section class="upcoming-events" style="background-color: #fdf6ee; border-top: 1px solid var(--border-color);">
+    <div class="container">
+      <div class="section-header reveal-up">
+        <span class="section-tag">Get Involved</span>
+        <h2 class="section-title">Upcoming Events</h2>
+      </div>
+
+      <div class="responsive-grid-4">
+        
+        <!-- Event Card 1 -->
+        <div class="reveal-up" style="background: white; border-radius: var(--border-radius); padding: 2.25rem; text-align: center; border: 1px solid var(--border-color); box-shadow: var(--shadow-sm); display: flex; flex-direction: column; justify-content: space-between;">
+          <div>
+            <div style="background-color: rgba(255, 107, 53, 0.1); width: 60px; height: 60px; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 1.5rem auto; color: var(--accent-color);">
+              <i data-lucide="calendar" style="width:28px; height:28px;"></i>
+            </div>
+            <h3 style="font-size: 1.35rem; margin-bottom: 0.75rem;">Cultural Dance Festival</h3>
+            <p style="color: var(--text-muted); font-size: 0.9rem; margin-bottom: 1.5rem;">Watch breathtaking folk and classical dances representing 15 distinct world communities.</p>
+          </div>
+          <a href="404.html" class="btn btn-primary" style="margin-top: 1rem; width: 100%;">Register Now</a>
+        </div>
+
+        <!-- Event Card 2 -->
+        <div class="reveal-up" style="background: white; border-radius: var(--border-radius); padding: 2.25rem; text-align: center; border: 1px solid var(--border-color); box-shadow: var(--shadow-sm); display: flex; flex-direction: column; justify-content: space-between;">
+          <div>
+            <div style="background-color: rgba(139, 0, 0, 0.1); width: 60px; height: 60px; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 1.5rem auto; color: var(--primary-color);">
+              <i data-lucide="chef-hat" style="width:28px; height:28px;"></i>
+            </div>
+            <h3 style="font-size: 1.35rem; margin-bottom: 0.75rem;">Heritage Food Fair</h3>
+            <p style="color: var(--text-muted); font-size: 0.9rem; margin-bottom: 1.5rem;">Savor authentic festival sweets and legacy recipes handmade by regional home cooks.</p>
+          </div>
+          <a href="404.html" class="btn btn-primary" style="margin-top: 1rem; width: 100%;">Register Now</a>
+        </div>
+
+        <!-- Event Card 3 -->
+        <div class="reveal-up" style="background: white; border-radius: var(--border-radius); padding: 2.25rem; text-align: center; border: 1px solid var(--border-color); box-shadow: var(--shadow-sm); display: flex; flex-direction: column; justify-content: space-between;">
+          <div>
+            <div style="background-color: rgba(255, 215, 0, 0.2); width: 60px; height: 60px; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 1.5rem auto; color: #b89200;">
+              <i data-lucide="mic" style="width:28px; height:28px;"></i>
+            </div>
+            <h3 style="font-size: 1.35rem; margin-bottom: 0.75rem;">Folk Music Concert</h3>
+            <p style="color: var(--text-muted); font-size: 0.9rem; margin-bottom: 1.5rem;">A magical evening of live performance featuring rare indigenous musical instruments.</p>
+          </div>
+          <a href="404.html" class="btn btn-primary" style="margin-top: 1rem; width: 100%;">Register Now</a>
+        </div>
+
+        <!-- Event Card 4 -->
+        <div class="reveal-up" style="background: white; border-radius: var(--border-radius); padding: 2.25rem; text-align: center; border: 1px solid var(--border-color); box-shadow: var(--shadow-sm); display: flex; flex-direction: column; justify-content: space-between;">
+          <div>
+            <div style="background-color: rgba(255, 107, 53, 0.1); width: 60px; height: 60px; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 1.5rem auto; color: var(--accent-color);">
+              <i data-lucide="brush" style="width:28px; height:28px;"></i>
+            </div>
+            <h3 style="font-size: 1.35rem; margin-bottom: 0.75rem;">Art & Craft Exhibition</h3>
+            <p style="color: var(--text-muted); font-size: 0.9rem; margin-bottom: 1.5rem;">Admire intricate handicraft designs, clay sculptures, and paintings made by hand.</p>
+          </div>
+          <a href="404.html" class="btn btn-primary" style="margin-top: 1rem; width: 100%;">Register Now</a>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- 6. Festival Statistics (Counters) -->
+  <section class="statistics-section" style="background-color: var(--primary-color); color: white; padding: 4rem 0;">
+    <div class="container">
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 3rem; text-align: center;">
+        
+        <div class="reveal-up">
+          <div class="counter-num" data-target="500" data-suffix="+" style="font-family: var(--font-title); font-size: 3rem; font-weight: 800; color: var(--secondary-color); margin-bottom: 0.5rem;">0+</div>
+          <p style="font-weight: 500; font-size: 0.95rem; text-transform: uppercase; letter-spacing: 1px; color: rgba(255,255,255,0.85);">Festivals Covered</p>
+        </div>
+
+        <div class="reveal-up">
+          <div class="counter-num" data-target="50" data-suffix="+" style="font-family: var(--font-title); font-size: 3rem; font-weight: 800; color: var(--secondary-color); margin-bottom: 0.5rem;">0+</div>
+          <p style="font-weight: 500; font-size: 0.95rem; text-transform: uppercase; letter-spacing: 1px; color: rgba(255,255,255,0.85);">Countries Represented</p>
+        </div>
+
+        <div class="reveal-up">
+          <div class="counter-num" data-target="1000" data-suffix="+" style="font-family: var(--font-title); font-size: 3rem; font-weight: 800; color: var(--secondary-color); margin-bottom: 0.5rem;">0+</div>
+          <p style="font-weight: 500; font-size: 0.95rem; text-transform: uppercase; letter-spacing: 1px; color: rgba(255,255,255,0.85);">Event Participants</p>
+        </div>
+
+        <div class="reveal-up">
+          <div class="counter-num" data-target="100" data-suffix="+" style="font-family: var(--font-title); font-size: 3rem; font-weight: 800; color: var(--secondary-color); margin-bottom: 0.5rem;">0+</div>
+          <p style="font-weight: 500; font-size: 0.95rem; text-transform: uppercase; letter-spacing: 1px; color: rgba(255,255,255,0.85);">Cultural Communities</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- 7. Testimonials -->
+  <section class="testimonials-section">
+    <div class="container">
+      <div class="section-header reveal-up">
+        <span class="section-tag">Testimonials</span>
+        <h2 class="section-title">Attendee Experiences</h2>
+        <p class="section-desc">Stories and experiences from visitors who have attended cultural celebrations and heritage events.</p>
+      </div>
+
+      <div class="responsive-grid-2" style="max-width: 1000px; margin: 0 auto;">
+        
+        <!-- Testimonial 1 -->
+        <div class="reveal-left" style="background: #fff; padding: 2.5rem; border-radius: var(--border-radius); box-shadow: var(--shadow-sm); border: 1px solid var(--border-color); position: relative;">
+          <div style="color: var(--secondary-color); margin-bottom: 1rem; font-size: 1.5rem;"><i data-lucide="quote" style="width:24px; height:24px;"></i></div>
+          <p style="font-style: italic; color: var(--text-color); margin-bottom: 1.5rem; font-size: 0.95rem; line-height: 1.8;">
+            "Attending the Pongal celebration arranged last year was a life-changing experience! The community feasts and traditional dances gave me a deep appreciation for South Indian agricultural rituals."
+          </p>
+          <div style="display: flex; align-items: center; gap: 0.75rem;">
+            <div style="width: 40px; height: 40px; border-radius: 50%; background-color: var(--secondary-color); display: flex; align-items: center; justify-content: center; font-weight: 700; color: var(--primary-color);">AM</div>
+            <div>
+              <h4 style="font-size: 0.95rem; font-weight: 600;">Aditi Mehta</h4>
+              <p style="color: var(--text-muted); font-size: 0.8rem;">Travel Enthusiast</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Testimonial 2 -->
+        <div class="reveal-right" style="background: #fff; padding: 2.5rem; border-radius: var(--border-radius); box-shadow: var(--shadow-sm); border: 1px solid var(--border-color); position: relative;">
+          <div style="color: var(--secondary-color); margin-bottom: 1rem; font-size: 1.5rem;"><i data-lucide="quote" style="width:24px; height:24px;"></i></div>
+          <p style="font-style: italic; color: var(--text-color); margin-bottom: 1.5rem; font-size: 0.95rem; line-height: 1.8;">
+            "The level of details presented on traditions like Folk Instruments and clothing was remarkable. I brought my kids here, and they had an absolute blast learning about different global customs."
+          </p>
+          <div style="display: flex; align-items: center; gap: 0.75rem;">
+            <div style="width: 40px; height: 40px; border-radius: 50%; background-color: var(--primary-color); display: flex; align-items: center; justify-content: center; font-weight: 700; color: white;">MK</div>
+            <div>
+              <h4 style="font-size: 0.95rem; font-weight: 600;">Marcus K.</h4>
+              <p style="color: var(--text-muted); font-size: 0.8rem;">Cultural Researcher</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- 8. Call To Action -->
+  <section class="cta-section" style="background: linear-gradient(rgba(139, 0, 0, 0.9), rgba(139, 0, 0, 0.9)), url('assets/Hand craft.webp') no-repeat center center/cover; padding: 6rem 0; color: white; text-align: center;">
+    <div class="container">
+      <h2 class="reveal-up" style="font-size: clamp(2rem, 4vw, 3rem); color: white; margin-bottom: 1rem; font-family: var(--font-title);">Experience the Beauty of Cultural Diversity</h2>
+      <p class="reveal-up" style="font-size: 1.15rem; color: rgba(255, 255, 255, 0.9); margin-bottom: 2.5rem; max-width: 700px; margin-left: auto; margin-right: auto; line-height: 1.8;">
+        Join us in celebrating traditions, preserving heritage, and discovering cultures from around the world.
+      </p>
+      <div class="reveal-up">
+        <a href="signup.html" class="btn btn-accent" style="padding: 1rem 3rem; font-size: 1rem;">Get Started <i data-lucide="chevron-right" style="width:18px;"></i></a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Common Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        
+        <!-- Col 1: Brand -->
+        <div class="footer-col">
+          <a href="index.html" class="logo-link" style="margin-bottom: 1.5rem; display: inline-block;">
+            <img src="assets/Stackly Logo.webp" alt="STACKLY" style="height: 44px; width: auto;">
+          </a>
+          <p class="footer-desc">A premium global hub dedicated to celebrating cultural diversity, keeping age-old traditions alive, and fostering community harmony.</p>
+          <div class="social-links">
+            <a href="404.html" class="social-icon"><img src="assets/facebook.webp" alt="Facebook"></a>
+            <a href="404.html" class="social-icon"><img src="assets/twitter.webp" alt="Twitter"></a>
+            <a href="404.html" class="social-icon"><img src="assets/instagram.webp" alt="Instagram"></a>
+            <a href="404.html" class="social-icon"><img src="assets/linkedin.webp" alt="LinkedIn"></a>
+          </div>
+        </div>
+
+        <!-- Col 2: Navigation Links -->
+        <div class="footer-col">
+          <h3>Quick Links</h3>
+          <ul class="footer-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="festivals.html">Festivals</a></li>
+            <li><a href="traditions.html">Traditions</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 3: Contact Info -->
+        <div class="footer-col">
+          <h3>Contact Info</h3>
+          <div class="footer-contact-item">
+            <i data-lucide="map-pin" style="width:20px; height:20px;"></i>
+            <span>12 Heritage Road, Cultural Plaza, India</span>
+          </div>
+          <div class="footer-contact-item">
+            <i data-lucide="phone" style="width:20px; height:20px;"></i>
+            <span>+91 98765 43210</span>
+          </div>
+          <div class="footer-contact-item">
+            <i data-lucide="mail" style="width:20px; height:20px;"></i>
+            <span>support@stackly.com</span>
+          </div>
+        </div>
+
+        <!-- Col 4: Newsletter -->
+        <div class="footer-col">
+          <h3>Newsletter</h3>
+          <p style="font-size: 0.9rem; margin-bottom: 1rem;">Subscribe to get monthly updates about global cultural celebrations and events.</p>
+          <form class="newsletter-form" id="newsletterForm">
+            <input type="email" placeholder="Your email address" class="newsletter-input" required>
+            <button type="submit" class="newsletter-submit"><i data-lucide="send" style="width:16px; height:16px;"></i></button>
+          </form>
+        </div>
+
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; 2026 STACKLY Cultural Festivals. All Rights Reserved.</p>
+        <p><a href="404.html" style="margin-right: 1rem;">Privacy Policy</a> | <a href="404.html">Terms of Service</a></p>
+      </div>
+    </div>
+  </footer>
+
+  <div id="toastContainer"></div>
+
+  <!-- Scripts -->
+  <script src="main.js"></script>
+</body>
+</html>

@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Traditions | STACKLY Cultural Festivals</title>
+  <meta name="description" content="Discover global clothing, music instruments, folk dances, sacred rituals, and traditional cuisines passed through generations.">
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="style.css">
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body>
+
+  <!-- Common Header / Navbar -->
+  <header class="header">
+    <div class="container header-container">
+      <a href="index.html" class="logo-link">
+        <img src="assets/Stackly Logo.webp" alt="STACKLY Logo" class="logo-img">
+      </a>
+      
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="festivals.html">Festivals</a></li>
+        <li class="active"><a href="traditions.html">Traditions</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li class="mobile-only"><a href="login.html" class="nav-btn" style="display: inline-block; margin-top: 1rem;">Login</a></li>
+      </ul>
+
+      <a href="login.html" class="nav-btn">Login</a>
+
+      <button class="menu-toggle">
+        <i data-lucide="menu"></i>
+      </button>
+    </div>
+  </header>
+
+  <!-- 1. Banner Section -->
+  <section class="banner-section" style="--bg-image: url('assets/Hand craft.webp'); --bg-overlay: linear-gradient(rgba(139, 0, 0, 0.8), rgba(139, 0, 0, 0.8)); padding: 8rem 0 5rem 0; text-align: center; color: white;">
+    <div class="container">
+      <h1 class="reveal-up active" style="font-size: 3rem; font-family: var(--font-title); margin-bottom: 1rem;">Traditions Through Generations</h1>
+      <p class="reveal-up active" style="font-size: 1.1rem; color: rgba(255,255,255,0.9); max-width: 600px; margin: 0 auto;">
+        Delve into the sacred rituals, attire, rhythms, and foods that have preserved our ancestors' values for centuries.
+      </p>
+    </div>
+  </section>
+
+  <!-- 2. Traditional Clothing -->
+  <section class="clothing-section">
+    <div class="container">
+      <div class="section-header reveal-up">
+        <span class="section-tag">Ethnic Attire</span>
+        <h2 class="section-title">Traditional Clothing</h2>
+        <p class="section-desc">Learn about ethnic attire and ceremonial dress from different regions of the world.</p>
+      </div>
+
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 2rem;">
+        
+        <!-- Sari -->
+        <div class="hover-zoom-card reveal-up" style="background: white; border-radius: var(--border-radius); overflow: hidden; border: 1px solid var(--border-color); box-shadow: var(--shadow-sm);">
+          <div style="height: 220px; overflow: hidden;">
+            <img src="assets/Navrathri.webp" alt="Traditional Sari" style="width:100%; height:100%; object-fit:cover;">
+          </div>
+          <div style="padding: 1.5rem;">
+            <h3 style="font-size: 1.25rem; color: var(--primary-color); margin-bottom: 0.5rem;">Sari & Veshti (India)</h3>
+            <p style="color: var(--text-muted); font-size: 0.9rem;">
+              Elegant unstitched drapes made from silk or cotton, symbolizing heritage, grace, and cultural identity across various states.
+            </p>
+          </div>
+        </div>
+
+        <!-- Kimono -->
+        <div class="hover-zoom-card reveal-up" style="background: white; border-radius: var(--border-radius); overflow: hidden; border: 1px solid var(--border-color); box-shadow: var(--shadow-sm);">
+          <div style="height: 220px; overflow: hidden; position: relative;">
+            <img src="assets/Cover photo.webp" alt="Kimono" style="width:100%; height:100%; object-fit:cover; filter: grayscale(30%) sepia(20%);">
+            <div style="position: absolute; top: 1rem; left: 1rem; background: var(--accent-color); color: white; padding: 0.25rem 0.75rem; border-radius: 50px; font-size: 0.8rem; font-weight: 600;">Ceremonial Wear</div>
+          </div>
+          <div style="padding: 1.5rem;">
+            <h3 style="font-size: 1.25rem; color: var(--primary-color); margin-bottom: 0.5rem;">Kimono (Japan)</h3>
+            <p style="color: var(--text-muted); font-size: 0.9rem;">
+              A T-shaped, straight-lined robe worn with a wide sash (obi), carrying complex symbolic meanings related to age and seasonal changes.
+            </p>
+          </div>
+        </div>
+
+        <!-- Hanbok -->
+        <div class="hover-zoom-card reveal-up" style="background: white; border-radius: var(--border-radius); overflow: hidden; border: 1px solid var(--border-color); box-shadow: var(--shadow-sm);">
+          <div style="height: 220px; overflow: hidden;">
+            <img src="assets/Onam festival.webp" alt="Hanbok" style="width:100%; height:100%; object-fit:cover; filter: brightness(95%);">
+          </div>
+          <div style="padding: 1.5rem;">
+            <h3 style="font-size: 1.25rem; color: var(--primary-color); margin-bottom: 0.5rem;">Hanbok (Korea)</h3>
+            <p style="color: var(--text-muted); font-size: 0.9rem;">
+              Characterized by vibrant colors and simple lines without pockets, representing formal grace worn during national festivals.
+            </p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- 3. Folk Music -->
+  <section class="music-section" style="background-color: #f6efe9;">
+    <div class="container">
+      <div class="section-header reveal-up">
+        <span class="section-tag">Ancestral Melodies</span>
+        <h2 class="section-title">Folk Music & Instruments</h2>
+        <p class="section-desc">Explore the unique instruments, historic songs, and musical legacies passed down through centuries.</p>
+      </div>
+
+      <div class="responsive-grid-2" style="align-items: center;">
+        
+        <div class="reveal-left" style="overflow: hidden; border-radius: var(--border-radius); box-shadow: var(--shadow-lg); height: 350px;">
+          <img src="assets/Cultural music.webp" alt="Folk Music Performance" style="width:100%; height:100%; object-fit:cover;">
+        </div>
+
+        <div class="reveal-right" style="display: flex; flex-direction: column; gap: 1.5rem;">
+          
+          <div style="background: white; padding: 1.5rem; border-radius: 8px; border-left: 4px solid var(--primary-color); box-shadow: var(--shadow-sm);">
+            <h4 style="font-size: 1.15rem; margin-bottom: 0.25rem; color: var(--primary-color);"><i data-lucide="music-3" style="width:18px; height:18px; vertical-align:middle; margin-right:5px;"></i> String Legacy</h4>
+            <p style="color: var(--text-muted); font-size: 0.9rem;">Instruments like the Indian Sitar, European Lute, and Japanese Shamisen produce rich resonance that carries historical folk melodies.</p>
+          </div>
+
+          <div style="background: white; padding: 1.5rem; border-radius: 8px; border-left: 4px solid var(--accent-color); box-shadow: var(--shadow-sm);">
+            <h4 style="font-size: 1.15rem; margin-bottom: 0.25rem; color: var(--accent-color);"><i data-lucide="drum" style="width:18px; height:18px; vertical-align:middle; margin-right:5px;"></i> Percussion Rhythms</h4>
+            <p style="color: var(--text-muted); font-size: 0.9rem;">Djembe drums of West Africa, Tabla of India, and Taiko of Japan provide the energetic beats that drive regional community dances.</p>
+          </div>
+
+          <div style="background: white; padding: 1.5rem; border-radius: 8px; border-left: 4px solid var(--secondary-color); box-shadow: var(--shadow-sm);">
+            <h4 style="font-size: 1.15rem; margin-bottom: 0.25rem; color: #b89200;"><i data-lucide="wind" style="width:18px; height:18px; vertical-align:middle; margin-right:5px;"></i> Wind Echoes</h4>
+            <p style="color: var(--text-muted); font-size: 0.9rem;">Native American flutes, Celtic tin whistles, and Indian Bansuri create atmospheric sounds echoing the natural wilderness.</p>
+          </div>
+
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- 4. Folk Dance -->
+  <section class="dance-section">
+    <div class="container">
+      <div class="section-header reveal-up">
+        <span class="section-tag">Rhythmic Storytelling</span>
+        <h2 class="section-title">Folk Dance</h2>
+        <p class="section-desc">Discover cultural dances performed during historical festivals and community celebrations.</p>
+      </div>
+
+      <div class="responsive-grid-2">
+        
+        <!-- Garba -->
+        <div class="reveal-left" style="background: white; border-radius: var(--border-radius); border: 1px solid var(--border-color); padding: 2.5rem; box-shadow: var(--shadow-sm);">
+          <div style="color: var(--primary-color); margin-bottom: 1.25rem;"><i data-lucide="activity" style="width:40px; height:40px;"></i></div>
+          <h3 style="font-size: 1.35rem; margin-bottom: 0.75rem;">Garba (Gujarat, India)</h3>
+          <p style="color: var(--text-muted); font-size: 0.95rem; line-height: 1.7;">
+            A circular dance performed during the Navratri festival, symbolizing the cyclical nature of life. Dancers rotate around a lamp in energetic sync.
+          </p>
+        </div>
+
+        <!-- Haka -->
+        <div class="reveal-right" style="background: white; border-radius: var(--border-radius); border: 1px solid var(--border-color); padding: 2.5rem; box-shadow: var(--shadow-sm);">
+          <div style="color: var(--accent-color); margin-bottom: 1.25rem;"><i data-lucide="swords" style="width:40px; height:40px;"></i></div>
+          <h3 style="font-size: 1.35rem; margin-bottom: 0.75rem;">Haka (New Zealand)</h3>
+          <p style="color: var(--text-muted); font-size: 0.95rem; line-height: 1.7;">
+            A ceremonial Maori war dance performed to welcome distinguished guests, honor tribal milestones, and express unified group strength and pride.
+          </p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- 5. Rituals & Customs -->
+  <section class="rituals-section" style="background-color: #f7f2ed; border-top: 1px solid var(--border-color);">
+    <div class="container">
+      <div class="section-header reveal-up">
+        <span class="section-tag">Sacred Practices</span>
+        <h2 class="section-title">Rituals & Customs</h2>
+        <p class="section-desc">Understand ceremonies, symbolic gestures, and historical traditions passed through generations.</p>
+      </div>
+
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 2rem;">
+        
+        <div class="reveal-up" style="background: white; padding: 2rem; border-radius: var(--border-radius); text-align: center; border: 1px solid var(--border-color); box-shadow: var(--shadow-sm);">
+          <h3 style="font-size: 1.25rem; color: var(--primary-color); margin-bottom: 0.75rem;">Boiling the Rice</h3>
+          <p style="color: var(--text-muted); font-size: 0.9rem; line-height: 1.6;">Boiling milk and fresh rice in clay pots during Pongal, letting it overflow to symbolize upcoming agricultural prosperity.</p>
+        </div>
+
+        <div class="reveal-up" style="background: white; padding: 2rem; border-radius: var(--border-radius); text-align: center; border: 1px solid var(--border-color); box-shadow: var(--shadow-sm);">
+          <h3 style="font-size: 1.25rem; color: var(--primary-color); margin-bottom: 0.75rem;">Lighting Diyas</h3>
+          <p style="color: var(--text-muted); font-size: 0.9rem; line-height: 1.6;">Placing clay lamps around households during Diwali to invite auspicious spiritual energy and ward off negative forces.</p>
+        </div>
+
+        <div class="reveal-up" style="background: white; padding: 2rem; border-radius: var(--border-radius); text-align: center; border: 1px solid var(--border-color); box-shadow: var(--shadow-sm);">
+          <h3 style="font-size: 1.25rem; color: var(--primary-color); margin-bottom: 0.75rem;">Pookalam Design</h3>
+          <p style="color: var(--text-muted); font-size: 0.9rem; line-height: 1.6;">Creating intricate geometric carpet patterns using local flowers during Onam to welcome the legendary King Mahabali.</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- 6. Traditional Cuisine -->
+  <section class="cuisine-section" style="border-top: 1px solid var(--border-color);">
+    <div class="container">
+      <div class="section-header reveal-up">
+        <span class="section-tag">Gastronomical Heritage</span>
+        <h2 class="section-title">Traditional Cuisine</h2>
+        <p class="section-desc">Popular festival foods, heirloom recipes, and their cultural significance.</p>
+      </div>
+
+      <div class="responsive-grid-2">
+        
+        <!-- Sweet Pongal -->
+        <div class="reveal-left" style="display: flex; gap: 1.5rem; background: #fff; padding: 2rem; border-radius: var(--border-radius); box-shadow: var(--shadow-sm); border: 1px solid var(--border-color);">
+          <div style="color: var(--primary-color);"><i data-lucide="soup" style="width:36px; height:36px;"></i></div>
+          <div>
+            <h3 style="font-size: 1.25rem; margin-bottom: 0.5rem; color: var(--primary-color);">Sweet Pongal (India)</h3>
+            <p style="color: var(--text-muted); font-size: 0.9rem; line-height: 1.6;">A traditional rice dish boiled with jaggery, milk, cashews, and raisins, symbolizing gratitude and crop abundance.</p>
+          </div>
+        </div>
+
+        <!-- Mooncake -->
+        <div class="reveal-right" style="display: flex; gap: 1.5rem; background: #fff; padding: 2rem; border-radius: var(--border-radius); box-shadow: var(--shadow-sm); border: 1px solid var(--border-color);">
+          <div style="color: var(--accent-color);"><i data-lucide="cake" style="width:36px; height:36px;"></i></div>
+          <div>
+            <h3 style="font-size: 1.25rem; margin-bottom: 0.5rem; color: var(--primary-color);">Mooncake (China)</h3>
+            <p style="color: var(--text-muted); font-size: 0.9rem; line-height: 1.6;">A rich pastry filled with sweet red bean or lotus seed paste, eaten during the Mid-Autumn Festival to represent family unity.</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Common Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        
+        <!-- Col 1: Brand -->
+        <div class="footer-col">
+          <a href="index.html" class="logo-link" style="margin-bottom: 1.5rem; display: inline-block;">
+            <img src="assets/Stackly Logo.webp" alt="STACKLY" style="height: 44px; width: auto;">
+          </a>
+          <p class="footer-desc">A premium global hub dedicated to celebrating cultural diversity, keeping age-old traditions alive, and fostering community harmony.</p>
+          <div class="social-links">
+            <a href="404.html" class="social-icon"><img src="assets/facebook.webp" alt="Facebook"></a>
+            <a href="404.html" class="social-icon"><img src="assets/twitter.webp" alt="Twitter"></a>
+            <a href="404.html" class="social-icon"><img src="assets/instagram.webp" alt="Instagram"></a>
+            <a href="404.html" class="social-icon"><img src="assets/linkedin.webp" alt="LinkedIn"></a>
+          </div>
+        </div>
+
+        <!-- Col 2: Navigation Links -->
+        <div class="footer-col">
+          <h3>Quick Links</h3>
+          <ul class="footer-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="festivals.html">Festivals</a></li>
+            <li><a href="traditions.html">Traditions</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 3: Contact Info -->
+        <div class="footer-col">
+          <h3>Contact Info</h3>
+          <div class="footer-contact-item">
+            <i data-lucide="map-pin" style="width:20px; height:20px;"></i>
+            <span>12 Heritage Road, Cultural Plaza, India</span>
+          </div>
+          <div class="footer-contact-item">
+            <i data-lucide="phone" style="width:20px; height:20px;"></i>
+            <span>+91 98765 43210</span>
+          </div>
+          <div class="footer-contact-item">
+            <i data-lucide="mail" style="width:20px; height:20px;"></i>
+            <span>support@stackly.com</span>
+          </div>
+        </div>
+
+        <!-- Col 4: Newsletter -->
+        <div class="footer-col">
+          <h3>Newsletter</h3>
+          <p style="font-size: 0.9rem; margin-bottom: 1rem;">Subscribe to get monthly updates about global cultural celebrations and events.</p>
+          <form class="newsletter-form" id="newsletterForm">
+            <input type="email" placeholder="Your email address" class="newsletter-input" required>
+            <button type="submit" class="newsletter-submit"><i data-lucide="send" style="width:16px; height:16px;"></i></button>
+          </form>
+        </div>
+
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; 2026 STACKLY Cultural Festivals. All Rights Reserved.</p>
+        <p><a href="404.html" style="margin-right: 1rem;">Privacy Policy</a> | <a href="404.html">Terms of Service</a></p>
+      </div>
+    </div>
+  </footer>
+
+  <div id="toastContainer"></div>
+
+  <!-- Scripts -->
+  <script src="main.js"></script>
+</body>
+</html>

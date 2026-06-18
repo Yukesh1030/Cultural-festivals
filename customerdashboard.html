@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Visitor Dashboard | STACKLY Cultural Festivals</title>
+  <!-- CSS Styles -->
+  <link rel="stylesheet" href="style.css">
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body class="dashboard-body">
+
+  <div class="dashboard-layout">
+    <!-- Sidebar Navigation -->
+    <aside class="sidebar">
+      <button class="sidebar-close" id="sidebarClose" style="display:none;"><i data-lucide="x"></i></button>
+      <div class="sidebar-logo"><img src="assets/Stackly Logo.webp" alt="STACKLY" style="height: 40px; width: auto; display: block; margin: 0 auto;"></div>
+      <ul class="sidebar-menu">
+        <li class="sidebar-menu-item active" id="menuOverview">
+          <a href="customerdashboard.html"><i data-lucide="layout-dashboard"></i> Overview</a>
+        </li>
+        <li class="sidebar-menu-item" id="menuBookmarks">
+          <a href="404.html"><i data-lucide="bookmark"></i> Bookmarks</a>
+        </li>
+        <li class="sidebar-menu-item" id="menuEvents">
+          <a href="404.html"><i data-lucide="calendar"></i> Registered Events</a>
+        </li>
+        <li class="sidebar-menu-item" id="menuSettings">
+          <a href="404.html"><i data-lucide="settings"></i> Notification Settings</a>
+        </li>
+      </ul>
+      <div class="sidebar-logout">
+        <a href="#" id="logoutLink"><i data-lucide="log-out"></i> Logout</a>
+      </div>
+    </aside>
+
+    <!-- Mobile Header -->
+    <div class="mobile-dashboard-header">
+      <div class="sidebar-logo" style="margin-bottom: 0;"><img src="assets/Stackly Logo.webp" alt="STACKLY" style="height: 32px; width: auto;"></div>
+      <button class="mobile-menu-toggle" id="mobileMenuToggle">
+        <i data-lucide="menu"></i>
+      </button>
+    </div>
+
+    <!-- Main Dashboard Area -->
+    <main class="dashboard-main">
+      <header class="dashboard-header">
+        <div>
+          <h1 style="font-size: 1.85rem; font-weight:700; color:var(--dark-color);" id="welcomeUser">Welcome Back, Festival Visitor</h1>
+          <p style="color:var(--text-muted); font-size:0.95rem;">Your personal cultural itinerary is active and up to date.</p>
+        </div>
+        <div class="dashboard-user-profile">
+          <div class="dashboard-user-avatar" id="avatarName">FV</div>
+          <span style="font-weight:600; color:var(--dark-color);" id="usernameDisplay">visitor@stackly.com</span>
+        </div>
+      </header>
+
+      <!-- Quick Stats Row -->
+      <div class="dashboard-stats">
+        
+        <div class="dashboard-stat-card">
+          <div class="dashboard-stat-icon" style="background-color:#fee2e2; color:var(--primary-color);"><i data-lucide="calendar-check"></i></div>
+          <div class="dashboard-stat-info">
+            <h3>Registered Events</h3>
+            <div class="dashboard-stat-value">3 Events</div>
+          </div>
+        </div>
+
+        <div class="dashboard-stat-card">
+          <div class="dashboard-stat-icon" style="background-color:#fef9c3; color:#a16207;"><i data-lucide="map"></i></div>
+          <div class="dashboard-stat-info">
+            <h3>Visited Festivals</h3>
+            <div class="dashboard-stat-value">8 Capitals</div>
+          </div>
+        </div>
+
+        <div class="dashboard-stat-card">
+          <div class="dashboard-stat-icon" style="background-color:#dbeafe; color:#1e40af;"><i data-lucide="message-square"></i></div>
+          <div class="dashboard-stat-info">
+            <h3>Active Forums</h3>
+            <div class="dashboard-stat-value">12 Threads</div>
+          </div>
+        </div>
+
+        <div class="dashboard-stat-card">
+          <div class="dashboard-stat-icon" style="background-color:#dcfce7; color:#15803d;"><i data-lucide="award"></i></div>
+          <div class="dashboard-stat-info">
+            <h3>Cultural Points</h3>
+            <div class="dashboard-stat-value" id="culturalPointsDisplay">450 Pts</div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Main Dashboard Grid -->
+      <div class="dashboard-grid">
+        <!-- Quick Controls Panel -->
+        <div class="dashboard-panel reveal-left active">
+          <div class="dashboard-panel-header">
+            <h2 class="dashboard-panel-title">Festival Alerts</h2>
+          </div>
+
+          <div class="dashboard-controls">
+            <!-- Item 1 -->
+            <div class="control-item active">
+              <div class="control-info">
+                <i data-lucide="bell" class="control-icon" style="color: var(--accent-color);"></i>
+                <span class="control-label">Pongal Harvest Alerts</span>
+              </div>
+              <label class="scenario-toggle">
+                <input type="checkbox" checked class="device-toggle" data-device="Pongal Harvest Alerts">
+                <span class="slider"></span>
+              </label>
+            </div>
+
+            <!-- Item 2 -->
+            <div class="control-item active">
+              <div class="control-info">
+                <i data-lucide="bell" class="control-icon" style="color: var(--accent-color);"></i>
+                <span class="control-label">Diwali Lights Alerts</span>
+              </div>
+              <label class="scenario-toggle">
+                <input type="checkbox" checked class="device-toggle" data-device="Diwali Lights Alerts">
+                <span class="slider"></span>
+              </label>
+            </div>
+
+            <!-- Item 3 -->
+            <div class="control-item">
+              <div class="control-info">
+                <i data-lucide="bell" class="control-icon"></i>
+                <span class="control-label">Onam Festival Alerts</span>
+              </div>
+              <label class="scenario-toggle">
+                <input type="checkbox" class="device-toggle" data-device="Onam Festival Alerts">
+                <span class="slider"></span>
+              </label>
+            </div>
+
+            <!-- Item 4 -->
+            <div class="control-item active">
+              <div class="control-info">
+                <i data-lucide="bell" class="control-icon" style="color: var(--accent-color);"></i>
+                <span class="control-label">Navratri Garba Alerts</span>
+              </div>
+              <label class="scenario-toggle">
+                <input type="checkbox" checked class="device-toggle" data-device="Navratri Garba Alerts">
+                <span class="slider"></span>
+              </label>
+            </div>
+          </div>
+        </div>
+
+        <!-- System Notifications -->
+        <div class="dashboard-panel reveal-right active">
+          <div class="dashboard-panel-header">
+            <h2 class="dashboard-panel-title">System Status</h2>
+          </div>
+
+          <div style="display:flex; flex-direction:column; gap:1.25rem;">
+            <div style="background-color: var(--light-color); border-left: 4px solid var(--primary-color); padding: 1rem; border-radius: 4px;">
+              <h4 style="font-weight:600; font-size:0.9rem; margin-bottom:0.25rem;">Folk Dance Workshop Pass</h4>
+              <p style="font-size:0.8rem; color:var(--text-muted);">Your registration entry code is confirmed for the 22nd June batch.</p>
+            </div>
+
+            <div style="background-color: var(--light-color); border-left: 4px solid #10B981; padding: 1rem; border-radius: 4px;">
+              <h4 style="font-weight:600; font-size:0.9rem; margin-bottom:0.25rem;">New Harvest Festival Listed</h4>
+              <p style="font-size:0.8rem; color:var(--text-muted);">Baisakhi (Spring Harvest) directory page is now live for readers.</p>
+            </div>
+
+            <div style="background-color: var(--light-color); border-left: 4px solid #F59E0B; padding: 1rem; border-radius: 4px;">
+              <h4 style="font-weight:600; font-size:0.9rem; margin-bottom:0.25rem;">Volunteer Badge Unlocked</h4>
+              <p style="font-size:0.8rem; color:var(--text-muted);">Congratulations! You have earned 50 cultural points for heritage posts.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+  </div>
+
+  <!-- Sidebar Overlay -->
+  <div class="sidebar-overlay" id="sidebarOverlay"></div>
+
+  <!-- Scripts -->
+  <script src="main.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      // Session Validation
+      if (localStorage.getItem('stackly_logged_in') !== 'true') {
+        window.location.replace('login.html');
+      }
+
+      // Display User details from registration session
+      const registeredName = localStorage.getItem('stackly_registered_name') || 'Festival Visitor';
+      const userDisplay = document.getElementById('usernameDisplay');
+      const avatarName = document.getElementById('avatarName');
+      const welcomeUser = document.getElementById('welcomeUser');
+      
+      if (userDisplay) userDisplay.innerText = registeredName;
+      if (welcomeUser) welcomeUser.innerText = `Welcome Back, ${registeredName}`;
+      if (avatarName) {
+        const initials = registeredName.split(' ').map(n => n[0]).join('').toUpperCase().substring(0,2);
+        avatarName.innerText = initials || 'FV';
+      }
+
+      // Quick Device Toggles (Replicating Smart Home Toggle Logic)
+      const devToggles = document.querySelectorAll('.device-toggle');
+      devToggles.forEach(toggle => {
+        toggle.addEventListener('change', () => {
+          const item = toggle.closest('.control-item');
+          const devName = toggle.getAttribute('data-device');
+          if (toggle.checked) {
+            item.classList.add('active');
+            item.querySelector('.control-icon').style.color = 'var(--accent-color)';
+            showToast(`${devName} turned ON`);
+          } else {
+            item.classList.remove('active');
+            item.querySelector('.control-icon').style.color = '';
+            showToast(`${devName} turned OFF`);
+          }
+        });
+      });
+
+      // Logout handler
+      const logoutLink = document.getElementById('logoutLink');
+      if (logoutLink) {
+        logoutLink.addEventListener('click', (e) => {
+          e.preventDefault();
+          localStorage.removeItem('stackly_logged_in');
+          localStorage.removeItem('stackly_user_role');
+          localStorage.removeItem('stackly_user_email');
+          window.location.replace('login.html');
+        });
+      }
+    });
+  </script>
+</body>
+</html>
