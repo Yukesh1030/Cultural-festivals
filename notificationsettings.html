@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Notification Settings | STACKLY Cultural Festivals</title>
+  <!-- CSS Styles -->
+  <link rel="stylesheet" href="style.css">
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body class="dashboard-body">
+
+  <div class="dashboard-layout">
+    <!-- Sidebar Navigation -->
+    <aside class="sidebar">
+      <button class="sidebar-close" id="sidebarClose" style="display:none;"><i data-lucide="x"></i></button>
+      <div class="sidebar-logo"><img src="assets/Stackly Logo.webp" alt="STACKLY" style="height: 40px; width: auto; display: block; margin: 0 auto;"></div>
+      <ul class="sidebar-menu">
+        <li class="sidebar-menu-item" id="menuOverview">
+          <a href="customerdashboard.html"><i data-lucide="layout-dashboard"></i> Overview</a>
+        </li>
+        <li class="sidebar-menu-item" id="menuBookmarks">
+          <a href="bookmarks.html"><i data-lucide="bookmark"></i> Bookmarks</a>
+        </li>
+        <li class="sidebar-menu-item" id="menuEvents">
+          <a href="registeredevents.html"><i data-lucide="calendar"></i> Registered Events</a>
+        </li>
+        <li class="sidebar-menu-item active" id="menuSettings">
+          <a href="notificationsettings.html"><i data-lucide="settings"></i> Notification Settings</a>
+        </li>
+      </ul>
+      <div class="sidebar-logout">
+        <a href="#" id="logoutLink"><i data-lucide="log-out"></i> Logout</a>
+      </div>
+    </aside>
+
+    <!-- Mobile Header -->
+    <div class="mobile-dashboard-header">
+      <div class="sidebar-logo" style="margin-bottom: 0;"><img src="assets/Stackly Logo.webp" alt="STACKLY" style="height: 32px; width: auto;"></div>
+      <button class="mobile-menu-toggle" id="mobileMenuToggle">
+        <i data-lucide="menu"></i>
+      </button>
+    </div>
+
+    <!-- Main Dashboard Area -->
+    <main class="dashboard-main">
+      <header class="dashboard-header">
+        <div>
+          <h1 style="font-size: 1.85rem; font-weight:700; color:var(--dark-color);">Notification Settings</h1>
+          <p style="color:var(--text-muted); font-size:0.95rem;">Configure how and when you receive cultural updates and event announcements.</p>
+        </div>
+        <div class="dashboard-user-profile">
+          <div class="dashboard-user-avatar" id="avatarName">FV</div>
+          <span style="font-weight:600; color:var(--dark-color);" id="usernameDisplay">visitor@stackly.com</span>
+        </div>
+      </header>
+
+      <!-- Preferences Form Layout -->
+      <div class="dashboard-grid" style="margin-top: 1rem;">
+        
+        <!-- Channels Preferences -->
+        <div class="dashboard-panel reveal-left active">
+          <div class="dashboard-panel-header">
+            <h2 class="dashboard-panel-title">Alert Channels</h2>
+          </div>
+          
+          <div class="dashboard-controls">
+            <!-- Email -->
+            <div class="control-item active">
+              <div class="control-info">
+                <i data-lucide="mail" class="control-icon" style="color: var(--accent-color);"></i>
+                <span class="control-label">Email Newsletters</span>
+              </div>
+              <label class="scenario-toggle">
+                <input type="checkbox" checked class="pref-toggle" data-pref="Email Newsletters">
+                <span class="slider"></span>
+              </label>
+            </div>
+
+            <!-- SMS -->
+            <div class="control-item">
+              <div class="control-info">
+                <i data-lucide="message-square" class="control-icon"></i>
+                <span class="control-label">SMS Booking Reminders</span>
+              </div>
+              <label class="scenario-toggle">
+                <input type="checkbox" class="pref-toggle" data-pref="SMS Booking Reminders">
+                <span class="slider"></span>
+              </label>
+            </div>
+
+            <!-- Browser Push -->
+            <div class="control-item active">
+              <div class="control-info">
+                <i data-lucide="bell" class="control-icon" style="color: var(--accent-color);"></i>
+                <span class="control-label">Browser Notifications</span>
+              </div>
+              <label class="scenario-toggle">
+                <input type="checkbox" checked class="pref-toggle" data-pref="Browser Notifications">
+                <span class="slider"></span>
+              </label>
+            </div>
+          </div>
+        </div>
+
+        <!-- Topics Preferences -->
+        <div class="dashboard-panel reveal-right active">
+          <div class="dashboard-panel-header">
+            <h2 class="dashboard-panel-title">Favorite Topics</h2>
+          </div>
+
+          <div class="dashboard-controls">
+            <!-- Harvest -->
+            <div class="control-item active">
+              <div class="control-info">
+                <i data-lucide="sprout" class="control-icon" style="color: var(--accent-color);"></i>
+                <span class="control-label">Harvest Festivals (Pongal, Onam)</span>
+              </div>
+              <label class="scenario-toggle">
+                <input type="checkbox" checked class="pref-toggle" data-pref="Harvest Festival alerts">
+                <span class="slider"></span>
+              </label>
+            </div>
+
+            <!-- Lights/Music -->
+            <div class="control-item active">
+              <div class="control-info">
+                <i data-lucide="music" class="control-icon" style="color: var(--accent-color);"></i>
+                <span class="control-label">Traditional Dance & Music Fests</span>
+              </div>
+              <label class="scenario-toggle">
+                <input type="checkbox" checked class="pref-toggle" data-pref="Dance and Music alerts">
+                <span class="slider"></span>
+              </label>
+            </div>
+
+            <!-- Crafts -->
+            <div class="control-item">
+              <div class="control-info">
+                <i data-lucide="palette" class="control-icon"></i>
+                <span class="control-label">Art, Crafts & Heritage Seminars</span>
+              </div>
+              <label class="scenario-toggle">
+                <input type="checkbox" class="pref-toggle" data-pref="Heritage Art alerts">
+                <span class="slider"></span>
+              </label>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </main>
+  </div>
+
+  <!-- Sidebar Overlay -->
+  <div class="sidebar-overlay" id="sidebarOverlay"></div>
+
+  <!-- Scripts -->
+  <script src="main.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      // Session Validation
+      if (localStorage.getItem('stackly_logged_in') !== 'true') {
+        window.location.replace('login.html');
+      }
+
+      // Display User details from registration session
+      const registeredName = localStorage.getItem('stackly_registered_name') || 'Festival Visitor';
+      const userDisplay = document.getElementById('usernameDisplay');
+      const avatarName = document.getElementById('avatarName');
+      
+      if (userDisplay) userDisplay.innerText = registeredName;
+      if (avatarName) {
+        const initials = registeredName.split(' ').map(n => n[0]).join('').toUpperCase().substring(0,2);
+        avatarName.innerText = initials || 'FV';
+      }
+
+      // Preferences Toggles logic
+      const prefToggles = document.querySelectorAll('.pref-toggle');
+      prefToggles.forEach(toggle => {
+        toggle.addEventListener('change', () => {
+          const item = toggle.closest('.control-item');
+          const prefName = toggle.getAttribute('data-pref');
+          if (toggle.checked) {
+            item.classList.add('active');
+            item.querySelector('.control-icon').style.color = 'var(--accent-color)';
+            showToast(`${prefName} turned ON`);
+          } else {
+            item.classList.remove('active');
+            item.querySelector('.control-icon').style.color = '';
+            showToast(`${prefName} turned OFF`);
+          }
+        });
+      });
+
+      // Logout handler
+      const logoutLink = document.getElementById('logoutLink');
+      if (logoutLink) {
+        logoutLink.addEventListener('click', (e) => {
+          e.preventDefault();
+          localStorage.removeItem('stackly_logged_in');
+          localStorage.removeItem('stackly_user_role');
+          localStorage.removeItem('stackly_user_email');
+          window.location.replace('login.html');
+        });
+      }
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Registered Events | STACKLY Cultural Festivals</title>
+  <!-- CSS Styles -->
+  <link rel="stylesheet" href="style.css">
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body class="dashboard-body">
+
+  <div class="dashboard-layout">
+    <!-- Sidebar Navigation -->
+    <aside class="sidebar">
+      <button class="sidebar-close" id="sidebarClose" style="display:none;"><i data-lucide="x"></i></button>
+      <div class="sidebar-logo"><img src="assets/Stackly Logo.webp" alt="STACKLY" style="height: 40px; width: auto; display: block; margin: 0 auto;"></div>
+      <ul class="sidebar-menu">
+        <li class="sidebar-menu-item" id="menuOverview">
+          <a href="customerdashboard.html"><i data-lucide="layout-dashboard"></i> Overview</a>
+        </li>
+        <li class="sidebar-menu-item" id="menuBookmarks">
+          <a href="bookmarks.html"><i data-lucide="bookmark"></i> Bookmarks</a>
+        </li>
+        <li class="sidebar-menu-item active" id="menuEvents">
+          <a href="registeredevents.html"><i data-lucide="calendar"></i> Registered Events</a>
+        </li>
+        <li class="sidebar-menu-item" id="menuSettings">
+          <a href="notificationsettings.html"><i data-lucide="settings"></i> Notification Settings</a>
+        </li>
+      </ul>
+      <div class="sidebar-logout">
+        <a href="#" id="logoutLink"><i data-lucide="log-out"></i> Logout</a>
+      </div>
+    </aside>
+
+    <!-- Mobile Header -->
+    <div class="mobile-dashboard-header">
+      <div class="sidebar-logo" style="margin-bottom: 0;"><img src="assets/Stackly Logo.webp" alt="STACKLY" style="height: 32px; width: auto;"></div>
+      <button class="mobile-menu-toggle" id="mobileMenuToggle">
+        <i data-lucide="menu"></i>
+      </button>
+    </div>
+
+    <!-- Main Dashboard Area -->
+    <main class="dashboard-main">
+      <header class="dashboard-header">
+        <div>
+          <h1 style="font-size: 1.85rem; font-weight:700; color:var(--dark-color);">Registered Events</h1>
+          <p style="color:var(--text-muted); font-size:0.95rem;">Manage your active bookings, entry passes, and schedules.</p>
+        </div>
+        <div class="dashboard-user-profile">
+          <div class="dashboard-user-avatar" id="avatarName">FV</div>
+          <span style="font-weight:600; color:var(--dark-color);" id="usernameDisplay">visitor@stackly.com</span>
+        </div>
+      </header>
+
+      <!-- Events List Area -->
+      <div class="dashboard-panel reveal-up active" style="margin-top: 1rem;">
+        <div class="dashboard-panel-header">
+          <h2 class="dashboard-panel-title">Active Passes & Tickets</h2>
+        </div>
+
+        <div style="overflow-x: auto;">
+          <table style="width: 100%; border-collapse: collapse; text-align: left;">
+            <thead>
+              <tr style="background-color: var(--primary-color); color: white; font-family: var(--font-body); font-size: 0.9rem;">
+                <th style="padding: 1.25rem 1.5rem; font-weight: 600;">Event / Workshop</th>
+                <th style="padding: 1.25rem 1.5rem; font-weight: 600;">Date & Time</th>
+                <th style="padding: 1.25rem 1.5rem; font-weight: 600;">Location</th>
+                <th style="padding: 1.25rem 1.5rem; font-weight: 600;">Pass ID</th>
+                <th style="padding: 1.25rem 1.5rem; font-weight: 600; text-align: right;">Action</th>
+              </tr>
+            </thead>
+            <tbody>
+              <!-- Row 1 -->
+              <tr style="border-bottom: 1px solid var(--border-color);" id="rowEvent1">
+                <td style="padding: 1.25rem 1.5rem;">
+                  <div style="font-weight: 600; color: var(--primary-color);">Folk Dance Workshop</div>
+                  <div style="font-size: 0.75rem; color: var(--text-muted);">Traditional garba & bhangra drills</div>
+                </td>
+                <td style="padding: 1.25rem 1.5rem; font-size: 0.9rem;">June 22, 2026<br><span style="font-size: 0.75rem; color: var(--text-muted);">18:00 - 20:00</span></td>
+                <td style="padding: 1.25rem 1.5rem; font-size: 0.9rem;">Community Hall A, NY</td>
+                <td style="padding: 1.25rem 1.5rem; font-family: monospace; font-size: 0.9rem; font-weight: 600; color: var(--accent-color);">ST-FD-8942</td>
+                <td style="padding: 1.25rem 1.5rem; text-align: right;">
+                  <button class="action-pass-btn nav-btn" data-event="Folk Dance Workshop" data-code="ST-FD-8942" style="padding: 0.4rem 1rem; font-size: 0.8rem; border-radius: 4px;">Pass</button>
+                </td>
+              </tr>
+              <!-- Row 2 -->
+              <tr style="border-bottom: 1px solid var(--border-color);" id="rowEvent2">
+                <td style="padding: 1.25rem 1.5rem;">
+                  <div style="font-weight: 600; color: var(--primary-color);">Diwali Light Concert</div>
+                  <div style="font-size: 0.75rem; color: var(--text-muted);">Folk strings & light displays</div>
+                </td>
+                <td style="padding: 1.25rem 1.5rem; font-size: 0.9rem;">Nov 12, 2026<br><span style="font-size: 0.75rem; color: var(--text-muted);">19:30 - 22:30</span></td>
+                <td style="padding: 1.25rem 1.5rem; font-size: 0.9rem;">Central Park Amphitheater</td>
+                <td style="padding: 1.25rem 1.5rem; font-family: monospace; font-size: 0.9rem; font-weight: 600; color: var(--accent-color);">ST-DL-2305</td>
+                <td style="padding: 1.25rem 1.5rem; text-align: right;">
+                  <button class="action-pass-btn nav-btn" data-event="Diwali Light Concert" data-code="ST-DL-2305" style="padding: 0.4rem 1rem; font-size: 0.8rem; border-radius: 4px;">Pass</button>
+                </td>
+              </tr>
+              <!-- Row 3 -->
+              <tr style="border-bottom: 1px solid var(--border-color);" id="rowEvent3">
+                <td style="padding: 1.25rem 1.5rem;">
+                  <div style="font-weight: 600; color: var(--primary-color);">Pongal Food Tasting</div>
+                  <div style="font-size: 0.75rem; color: var(--text-muted);">Organic sweet rice fest & dishes</div>
+                </td>
+                <td style="padding: 1.25rem 1.5rem; font-size: 0.9rem;">Jan 14, 2027<br><span style="font-size: 0.75rem; color: var(--text-muted);">12:00 - 15:00</span></td>
+                <td style="padding: 1.25rem 1.5rem; font-size: 0.9rem;">Downtown Pavilion, SF</td>
+                <td style="padding: 1.25rem 1.5rem; font-family: monospace; font-size: 0.9rem; font-weight: 600; color: var(--accent-color);">ST-PF-6078</td>
+                <td style="padding: 1.25rem 1.5rem; text-align: right;">
+                  <button class="action-pass-btn nav-btn" data-event="Diwali Light Concert" data-code="ST-PF-6078" style="padding: 0.4rem 1rem; font-size: 0.8rem; border-radius: 4px;">Pass</button>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+      
+    </main>
+  </div>
+
+  <!-- Sidebar Overlay -->
+  <div class="sidebar-overlay" id="sidebarOverlay"></div>
+
+  <!-- Scripts -->
+  <script src="main.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      // Session Validation
+      if (localStorage.getItem('stackly_logged_in') !== 'true') {
+        window.location.replace('login.html');
+      }
+
+      // Display User details from registration session
+      const registeredName = localStorage.getItem('stackly_registered_name') || 'Festival Visitor';
+      const userDisplay = document.getElementById('usernameDisplay');
+      const avatarName = document.getElementById('avatarName');
+      
+      if (userDisplay) userDisplay.innerText = registeredName;
+      if (avatarName) {
+        const initials = registeredName.split(' ').map(n => n[0]).join('').toUpperCase().substring(0,2);
+        avatarName.innerText = initials || 'FV';
+      }
+
+      // Action Buttons logic
+      const passButtons = document.querySelectorAll('.action-pass-btn');
+      passButtons.forEach(btn => {
+        btn.addEventListener('click', () => {
+          const evName = btn.getAttribute('data-event');
+          const code = btn.getAttribute('data-code');
+          showToast(`Pass ID: ${code} - Show this code at entrance for ${evName}`);
+        });
+      });
+
+      // Logout handler
+      const logoutLink = document.getElementById('logoutLink');
+      if (logoutLink) {
+        logoutLink.addEventListener('click', (e) => {
+          e.preventDefault();
+          localStorage.removeItem('stackly_logged_in');
+          localStorage.removeItem('stackly_user_role');
+          localStorage.removeItem('stackly_user_email');
+          window.location.replace('login.html');
+        });
+      }
+    });
+  </script>
+</body>
+</html>

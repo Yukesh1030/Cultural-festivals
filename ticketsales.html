@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ticket Sales | STACKLY Cultural Festivals</title>
+  <!-- CSS Styles -->
+  <link rel="stylesheet" href="style.css">
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body class="dashboard-body">
+
+  <div class="dashboard-layout">
+    <!-- Sidebar Navigation -->
+    <aside class="sidebar">
+      <button class="sidebar-close" id="sidebarClose" style="display:none;"><i data-lucide="x"></i></button>
+      <div class="sidebar-logo"><img src="assets/Stackly Logo.webp" alt="STACKLY" style="height: 40px; width: auto; display: block; margin: 0 auto;"></div>
+      <ul class="sidebar-menu">
+        <li class="sidebar-menu-item" id="menuOverview">
+          <a href="sellerdashboard.html"><i data-lucide="layout-dashboard"></i> Overview</a>
+        </li>
+        <li class="sidebar-menu-item" id="menuManage">
+          <a href="manageevents.html"><i data-lucide="folder-open"></i> Manage Events</a>
+        </li>
+        <li class="sidebar-menu-item" id="menuParticipants">
+          <a href="participantlist.html"><i data-lucide="users"></i> Participant List</a>
+        </li>
+        <li class="sidebar-menu-item active" id="menuTickets">
+          <a href="ticketsales.html"><i data-lucide="credit-card"></i> Ticket Sales</a>
+        </li>
+      </ul>
+      <div class="sidebar-logout">
+        <a href="#" id="logoutLink"><i data-lucide="log-out"></i> Logout</a>
+      </div>
+    </aside>
+
+    <!-- Mobile Header -->
+    <div class="mobile-dashboard-header">
+      <div class="sidebar-logo" style="margin-bottom: 0;"><img src="assets/Stackly Logo.webp" alt="STACKLY" style="height: 32px; width: auto;"></div>
+      <button class="mobile-menu-toggle" id="mobileMenuToggle">
+        <i data-lucide="menu"></i>
+      </button>
+    </div>
+
+    <!-- Main Dashboard Area -->
+    <main class="dashboard-main">
+      <header class="dashboard-header">
+        <div>
+          <h1 style="font-size: 1.85rem; font-weight:700; color:var(--dark-color);">Ticket Sales</h1>
+          <p style="color:var(--text-muted); font-size:0.95rem;">Analyze revenue, ticket purchases, and capacity statistics.</p>
+        </div>
+        <div class="dashboard-user-profile">
+          <div class="dashboard-user-avatar" id="avatarName">EO</div>
+          <span style="font-weight:600; color:var(--dark-color);" id="usernameDisplay">organizer@stackly.com</span>
+        </div>
+      </header>
+
+      <!-- Metrics Row -->
+      <div class="dashboard-stats" style="margin-top: 1rem;">
+        <div class="dashboard-stat-card">
+          <div class="dashboard-stat-icon" style="background-color:#fee2e2; color:var(--primary-color);"><i data-lucide="dollar-sign"></i></div>
+          <div class="dashboard-stat-info">
+            <h3>Total Revenue</h3>
+            <div class="dashboard-stat-value">$1,450.00</div>
+          </div>
+        </div>
+
+        <div class="dashboard-stat-card">
+          <div class="dashboard-stat-icon" style="background-color:#fef9c3; color:#a16207;"><i data-lucide="ticket"></i></div>
+          <div class="dashboard-stat-info">
+            <h3>Tickets Sold</h3>
+            <div class="dashboard-stat-value">172 Passes</div>
+          </div>
+        </div>
+
+        <div class="dashboard-stat-card">
+          <div class="dashboard-stat-icon" style="background-color:#dbeafe; color:#1e40af;"><i data-lucide="percent"></i></div>
+          <div class="dashboard-stat-info">
+            <h3>Capacity Rate</h3>
+            <div class="dashboard-stat-value">68.8% Average</div>
+          </div>
+        </div>
+
+        <div class="dashboard-stat-card">
+          <div class="dashboard-stat-icon" style="background-color:#dcfce7; color:#15803d;"><i data-lucide="trending-up"></i></div>
+          <div class="dashboard-stat-info">
+            <h3>Sales Target</h3>
+            <div class="dashboard-stat-value">82% Achieved</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Grid area for Chart and Transactions -->
+      <div class="dashboard-grid">
+        
+        <!-- Capacity Sales Chart -->
+        <div class="dashboard-panel reveal-left active">
+          <div class="dashboard-panel-header">
+            <h2 class="dashboard-panel-title">Sales by Event</h2>
+          </div>
+
+          <div style="display: flex; flex-direction: column; gap: 1.5rem; margin-top: 1rem;">
+            <!-- Bar 1 -->
+            <div>
+              <div style="display: flex; justify-content: space-between; font-size: 0.85rem; font-weight:600; margin-bottom: 0.5rem;">
+                <span>Folk Dance Workshop</span>
+                <span>96% (48/50 Tickets)</span>
+              </div>
+              <div style="background-color: var(--border-color); height: 8px; border-radius: 4px; overflow: hidden;">
+                <div style="background-color: var(--primary-color); width: 96%; height: 100%; border-radius: 4px;"></div>
+              </div>
+            </div>
+
+            <!-- Bar 2 -->
+            <div>
+              <div style="display: flex; justify-content: space-between; font-size: 0.85rem; font-weight:600; margin-bottom: 0.5rem;">
+                <span>Diwali Light Concert</span>
+                <span>62% (124/200 Tickets)</span>
+              </div>
+              <div style="background-color: var(--border-color); height: 8px; border-radius: 4px; overflow: hidden;">
+                <div style="background-color: var(--accent-color); width: 62%; height: 100%; border-radius: 4px;"></div>
+              </div>
+            </div>
+
+            <!-- Bar 3 -->
+            <div>
+              <div style="display: flex; justify-content: space-between; font-size: 0.85rem; font-weight:600; margin-bottom: 0.5rem;">
+                <span>Pongal Food Tasting</span>
+                <span>40% (20/50 Tickets)</span>
+              </div>
+              <div style="background-color: var(--border-color); height: 8px; border-radius: 4px; overflow: hidden;">
+                <div style="background-color: #10b981; width: 40%; height: 100%; border-radius: 4px;"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Recent Transactions -->
+        <div class="dashboard-panel reveal-right active">
+          <div class="dashboard-panel-header">
+            <h2 class="dashboard-panel-title">Recent Transactions</h2>
+          </div>
+
+          <div style="display:flex; flex-direction:column; gap:1rem;">
+            <!-- Row 1 -->
+            <div style="display:flex; justify-content:space-between; align-items:center; background-color: var(--light-color); padding: 0.75rem 1rem; border-radius: 6px;">
+              <div>
+                <h4 style="font-size:0.85rem; font-weight:600;">John Doe</h4>
+                <p style="font-size:0.75rem; color:var(--text-muted);">1x Folk Dance Pass</p>
+              </div>
+              <div style="text-align:right;">
+                <span style="font-weight:700; color:var(--primary-color); font-size:0.9rem;">$15.00</span>
+                <p style="font-size:0.75rem; color:#10b981; font-weight:600;">Paid</p>
+              </div>
+            </div>
+
+            <!-- Row 2 -->
+            <div style="display:flex; justify-content:space-between; align-items:center; background-color: var(--light-color); padding: 0.75rem 1rem; border-radius: 6px;">
+              <div>
+                <h4 style="font-size:0.85rem; font-weight:600;">Alice Smith</h4>
+                <p style="font-size:0.75rem; color:var(--text-muted);">2x Diwali Light Concert Passes</p>
+              </div>
+              <div style="text-align:right;">
+                <span style="font-weight:700; color:var(--primary-color); font-size:0.9rem;">$50.00</span>
+                <p style="font-size:0.75rem; color:#10b981; font-weight:600;">Paid</p>
+              </div>
+            </div>
+
+            <!-- Row 3 -->
+            <div style="display:flex; justify-content:space-between; align-items:center; background-color: var(--light-color); padding: 0.75rem 1rem; border-radius: 6px;">
+              <div>
+                <h4 style="font-size:0.85rem; font-weight:600;">Bob Johnson</h4>
+                <p style="font-size:0.75rem; color:var(--text-muted);">1x Pongal Food Tasting Pass</p>
+              </div>
+              <div style="text-align:right;">
+                <span style="font-weight:700; color:var(--primary-color); font-size:0.9rem;">$10.00</span>
+                <p style="font-size:0.75rem; color:#d97706; font-weight:600;">Pending</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </main>
+  </div>
+
+  <!-- Sidebar Overlay -->
+  <div class="sidebar-overlay" id="sidebarOverlay"></div>
+
+  <!-- Scripts -->
+  <script src="main.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      // Session Validation
+      if (localStorage.getItem('stackly_logged_in') !== 'true') {
+        window.location.replace('login.html');
+      }
+
+      // Display User details from registration session
+      const registeredName = localStorage.getItem('stackly_registered_name') || 'Event Organizer';
+      const userDisplay = document.getElementById('usernameDisplay');
+      const avatarName = document.getElementById('avatarName');
+      
+      if (userDisplay) userDisplay.innerText = registeredName;
+      if (avatarName) {
+        const initials = registeredName.split(' ').map(n => n[0]).join('').toUpperCase().substring(0,2);
+        avatarName.innerText = initials || 'EO';
+      }
+
+      // Logout handler
+      const logoutLink = document.getElementById('logoutLink');
+      if (logoutLink) {
+        logoutLink.addEventListener('click', (e) => {
+          e.preventDefault();
+          localStorage.removeItem('stackly_logged_in');
+          localStorage.removeItem('stackly_user_role');
+          localStorage.removeItem('stackly_user_email');
+          window.location.replace('login.html');
+        });
+      }
+    });
+  </script>
+</body>
+</html>

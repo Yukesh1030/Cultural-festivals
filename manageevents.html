@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Manage Events | STACKLY Cultural Festivals</title>
+  <!-- CSS Styles -->
+  <link rel="stylesheet" href="style.css">
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body class="dashboard-body">
+
+  <div class="dashboard-layout">
+    <!-- Sidebar Navigation -->
+    <aside class="sidebar">
+      <button class="sidebar-close" id="sidebarClose" style="display:none;"><i data-lucide="x"></i></button>
+      <div class="sidebar-logo"><img src="assets/Stackly Logo.webp" alt="STACKLY" style="height: 40px; width: auto; display: block; margin: 0 auto;"></div>
+      <ul class="sidebar-menu">
+        <li class="sidebar-menu-item" id="menuOverview">
+          <a href="sellerdashboard.html"><i data-lucide="layout-dashboard"></i> Overview</a>
+        </li>
+        <li class="sidebar-menu-item active" id="menuManage">
+          <a href="manageevents.html"><i data-lucide="folder-open"></i> Manage Events</a>
+        </li>
+        <li class="sidebar-menu-item" id="menuParticipants">
+          <a href="participantlist.html"><i data-lucide="users"></i> Participant List</a>
+        </li>
+        <li class="sidebar-menu-item" id="menuTickets">
+          <a href="ticketsales.html"><i data-lucide="credit-card"></i> Ticket Sales</a>
+        </li>
+      </ul>
+      <div class="sidebar-logout">
+        <a href="#" id="logoutLink"><i data-lucide="log-out"></i> Logout</a>
+      </div>
+    </aside>
+
+    <!-- Mobile Header -->
+    <div class="mobile-dashboard-header">
+      <div class="sidebar-logo" style="margin-bottom: 0;"><img src="assets/Stackly Logo.webp" alt="STACKLY" style="height: 32px; width: auto;"></div>
+      <button class="mobile-menu-toggle" id="mobileMenuToggle">
+        <i data-lucide="menu"></i>
+      </button>
+    </div>
+
+    <!-- Main Dashboard Area -->
+    <main class="dashboard-main">
+      <header class="dashboard-header">
+        <div>
+          <h1 style="font-size: 1.85rem; font-weight:700; color:var(--dark-color);">Manage Events</h1>
+          <p style="color:var(--text-muted); font-size:0.95rem;">Create and modify your event listings, bookings, and timings.</p>
+        </div>
+        <div class="dashboard-user-profile">
+          <div class="dashboard-user-avatar" id="avatarName">EO</div>
+          <span style="font-weight:600; color:var(--dark-color);" id="usernameDisplay">organizer@stackly.com</span>
+        </div>
+      </header>
+
+      <!-- Main Dashboard Grid -->
+      <div class="dashboard-grid" style="margin-top: 1rem;">
+        
+        <!-- List of Listings -->
+        <div class="dashboard-panel reveal-left active" style="display: flex; flex-direction: column; gap: 1.25rem;">
+          <div class="dashboard-panel-header">
+            <h2 class="dashboard-panel-title">Active Event Listings</h2>
+          </div>
+
+          <!-- Card 1 -->
+          <div class="control-item active" id="eventCard1" style="flex-direction: column; align-items: stretch; gap: 1rem;">
+            <div style="display: flex; justify-content: space-between; align-items: center;">
+              <div>
+                <h3 style="font-size: 1.1rem; color: var(--primary-color);">Folk Dance Workshop</h3>
+                <p style="font-size: 0.8rem; color: var(--text-muted);"><i data-lucide="calendar" style="width:12px; height:12px; vertical-align:middle;"></i> June 22, 2026 | 18:00 - 20:00</p>
+              </div>
+              <label class="scenario-toggle">
+                <input type="checkbox" checked class="reg-toggle" data-event="Folk Dance Workshop">
+                <span class="slider"></span>
+              </label>
+            </div>
+            <div style="display: flex; justify-content: space-between; align-items: center; border-top: 1px solid var(--border-color); padding-top: 0.75rem; font-size: 0.8rem; color: var(--text-muted);">
+              <span>Bookings: <strong>48 / 50</strong></span>
+              <button class="delete-event-btn" data-target="eventCard1" data-name="Folk Dance Workshop" style="background: none; border: none; color: var(--primary-color); cursor: pointer; display: flex; align-items: center; gap: 0.25rem;"><i data-lucide="trash-2" style="width:14px; height:14px;"></i> Delete</button>
+            </div>
+          </div>
+
+          <!-- Card 2 -->
+          <div class="control-item active" id="eventCard2" style="flex-direction: column; align-items: stretch; gap: 1rem;">
+            <div style="display: flex; justify-content: space-between; align-items: center;">
+              <div>
+                <h3 style="font-size: 1.1rem; color: var(--primary-color);">Diwali Light Concert</h3>
+                <p style="font-size: 0.8rem; color: var(--text-muted);"><i data-lucide="calendar" style="width:12px; height:12px; vertical-align:middle;"></i> Nov 12, 2026 | 19:30 - 22:30</p>
+              </div>
+              <label class="scenario-toggle">
+                <input type="checkbox" checked class="reg-toggle" data-event="Diwali Light Concert">
+                <span class="slider"></span>
+              </label>
+            </div>
+            <div style="display: flex; justify-content: space-between; align-items: center; border-top: 1px solid var(--border-color); padding-top: 0.75rem; font-size: 0.8rem; color: var(--text-muted);">
+              <span>Bookings: <strong>124 / 200</strong></span>
+              <button class="delete-event-btn" data-target="eventCard2" data-name="Diwali Light Concert" style="background: none; border: none; color: var(--primary-color); cursor: pointer; display: flex; align-items: center; gap: 0.25rem;"><i data-lucide="trash-2" style="width:14px; height:14px;"></i> Delete</button>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Add New Event Form -->
+        <div class="dashboard-panel reveal-right active">
+          <div class="dashboard-panel-header">
+            <h2 class="dashboard-panel-title">Add New Listing</h2>
+          </div>
+
+          <form id="newEventForm" style="display: flex; flex-direction: column; gap: 1rem;">
+            <div>
+              <label style="display: block; font-size: 0.85rem; font-weight: 600; margin-bottom: 0.5rem; color: var(--dark-color);">Event Name</label>
+              <input type="text" placeholder="e.g. Traditional Pottery Show" required style="width:100%; padding:0.8rem; border-radius:6px; border:1px solid var(--border-color); outline:none; font-family:var(--font-body); font-size:0.9rem;">
+            </div>
+
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem;">
+              <div>
+                <label style="display: block; font-size: 0.85rem; font-weight: 600; margin-bottom: 0.5rem; color: var(--dark-color);">Event Date</label>
+                <input type="date" required style="width:100%; padding:0.8rem; border-radius:6px; border:1px solid var(--border-color); outline:none; font-family:var(--font-body); font-size:0.9rem;">
+              </div>
+              <div>
+                <label style="display: block; font-size: 0.85rem; font-weight: 600; margin-bottom: 0.5rem; color: var(--dark-color);">Max Slots</label>
+                <input type="number" placeholder="50" min="5" required style="width:100%; padding:0.8rem; border-radius:6px; border:1px solid var(--border-color); outline:none; font-family:var(--font-body); font-size:0.9rem;">
+              </div>
+            </div>
+
+            <div>
+              <label style="display: block; font-size: 0.85rem; font-weight: 600; margin-bottom: 0.5rem; color: var(--dark-color);">Location Venue</label>
+              <input type="text" placeholder="e.g. Community Center Hall B" required style="width:100%; padding:0.8rem; border-radius:6px; border:1px solid var(--border-color); outline:none; font-family:var(--font-body); font-size:0.9rem;">
+            </div>
+
+            <button type="submit" class="btn btn-primary" style="padding: 0.85rem; width: 100%; border-radius: 50px; font-size: 0.95rem; margin-top: 1rem;">Publish Listing</button>
+          </form>
+        </div>
+
+      </div>
+
+    </main>
+  </div>
+
+  <!-- Sidebar Overlay -->
+  <div class="sidebar-overlay" id="sidebarOverlay"></div>
+
+  <!-- Scripts -->
+  <script src="main.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      // Session Validation
+      if (localStorage.getItem('stackly_logged_in') !== 'true') {
+        window.location.replace('login.html');
+      }
+
+      // Display User details from registration session
+      const registeredName = localStorage.getItem('stackly_registered_name') || 'Event Organizer';
+      const userDisplay = document.getElementById('usernameDisplay');
+      const avatarName = document.getElementById('avatarName');
+      
+      if (userDisplay) userDisplay.innerText = registeredName;
+      if (avatarName) {
+        const initials = registeredName.split(' ').map(n => n[0]).join('').toUpperCase().substring(0,2);
+        avatarName.innerText = initials || 'EO';
+      }
+
+      // Registrations toggles
+      const regToggles = document.querySelectorAll('.reg-toggle');
+      regToggles.forEach(toggle => {
+        toggle.addEventListener('change', () => {
+          const item = toggle.closest('.control-item');
+          const evName = toggle.getAttribute('data-event');
+          if (toggle.checked) {
+            item.classList.add('active');
+            showToast(`Registrations opened for ${evName}`);
+          } else {
+            item.classList.remove('active');
+            showToast(`Registrations closed for ${evName}`);
+          }
+        });
+      });
+
+      // Handle listing deletions
+      const deleteButtons = document.querySelectorAll('.delete-event-btn');
+      deleteButtons.forEach(btn => {
+        btn.addEventListener('click', () => {
+          const targetId = btn.getAttribute('data-target');
+          const evName = btn.getAttribute('data-name');
+          const card = document.getElementById(targetId);
+          if (card) {
+            card.style.opacity = '0';
+            card.style.transform = 'scale(0.95)';
+            card.style.transition = 'all 0.3s ease';
+            setTimeout(() => {
+              card.remove();
+              showToast(`${evName} listing has been deleted.`);
+            }, 300);
+          }
+        });
+      });
+
+      // Logout handler
+      const logoutLink = document.getElementById('logoutLink');
+      if (logoutLink) {
+        logoutLink.addEventListener('click', (e) => {
+          e.preventDefault();
+          localStorage.removeItem('stackly_logged_in');
+          localStorage.removeItem('stackly_user_role');
+          localStorage.removeItem('stackly_user_email');
+          window.location.replace('login.html');
+        });
+      }
+    });
+  </script>
+</body>
+</html>

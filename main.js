@@ -154,33 +154,19 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  // 7. Form Submission Actions (Index, Contact, Newsletter)
-  const contactForm = document.getElementById('contactForm');
-  if (contactForm) {
-    contactForm.addEventListener('submit', (e) => {
+  // 7. Form Submission Actions (Redirect to 404 after validation)
+  document.querySelectorAll('form').forEach(form => {
+    if (form.id === 'loginForm' || form.id === 'signupForm') return;
+    
+    form.addEventListener('submit', (e) => {
       e.preventDefault();
-      window.location.href = '404.html';
-    });
-  }
-
-  const registerForm = document.getElementById('registerForm');
-  if (registerForm) {
-    registerForm.addEventListener('submit', (e) => {
-      e.preventDefault();
-      window.location.href = '404.html';
-    });
-  }
-
-  const newsletterForm = document.getElementById('newsletterForm');
-  if (newsletterForm) {
-    newsletterForm.addEventListener('submit', (e) => {
-      e.preventDefault();
-      const emailInput = newsletterForm.querySelector('input[type="email"]');
-      if (emailInput && emailInput.value.trim() !== '') {
+      if (form.checkValidity()) {
         window.location.href = '404.html';
+      } else {
+        form.reportValidity();
       }
     });
-  }
+  });
 
   // 8. Custom Toast Notification for Actions
   window.showToast = function(message) {

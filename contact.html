@@ -307,21 +307,6 @@
 
   <!-- Scripts -->
   <script src="main.js"></script>
-  <script>
-    document.addEventListener('DOMContentLoaded', () => {
-      // Small local override for footer newsletter form
-      const footerForm = document.getElementById('newsletterFormSub');
-      if (footerForm) {
-        footerForm.addEventListener('submit', (e) => {
-          e.preventDefault();
-          const emailInput = footerForm.querySelector('input[type="email"]');
-          if (emailInput && emailInput.value.trim() !== '') {
-            showToast("Successfully subscribed to cultural newsletters!");
-            emailInput.value = '';
-          }
-        });
-      }
-    });
-  </script>
+
 </body>
 </html>

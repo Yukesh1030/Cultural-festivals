@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bookmarked Festivals | STACKLY Cultural Festivals</title>
+  <!-- CSS Styles -->
+  <link rel="stylesheet" href="style.css">
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body class="dashboard-body">
+
+  <div class="dashboard-layout">
+    <!-- Sidebar Navigation -->
+    <aside class="sidebar">
+      <button class="sidebar-close" id="sidebarClose" style="display:none;"><i data-lucide="x"></i></button>
+      <div class="sidebar-logo"><img src="assets/Stackly Logo.webp" alt="STACKLY" style="height: 40px; width: auto; display: block; margin: 0 auto;"></div>
+      <ul class="sidebar-menu">
+        <li class="sidebar-menu-item" id="menuOverview">
+          <a href="customerdashboard.html"><i data-lucide="layout-dashboard"></i> Overview</a>
+        </li>
+        <li class="sidebar-menu-item active" id="menuBookmarks">
+          <a href="bookmarks.html"><i data-lucide="bookmark"></i> Bookmarks</a>
+        </li>
+        <li class="sidebar-menu-item" id="menuEvents">
+          <a href="registeredevents.html"><i data-lucide="calendar"></i> Registered Events</a>
+        </li>
+        <li class="sidebar-menu-item" id="menuSettings">
+          <a href="notificationsettings.html"><i data-lucide="settings"></i> Notification Settings</a>
+        </li>
+      </ul>
+      <div class="sidebar-logout">
+        <a href="#" id="logoutLink"><i data-lucide="log-out"></i> Logout</a>
+      </div>
+    </aside>
+
+    <!-- Mobile Header -->
+    <div class="mobile-dashboard-header">
+      <div class="sidebar-logo" style="margin-bottom: 0;"><img src="assets/Stackly Logo.webp" alt="STACKLY" style="height: 32px; width: auto;"></div>
+      <button class="mobile-menu-toggle" id="mobileMenuToggle">
+        <i data-lucide="menu"></i>
+      </button>
+    </div>
+
+    <!-- Main Dashboard Area -->
+    <main class="dashboard-main">
+      <header class="dashboard-header">
+        <div>
+          <h1 style="font-size: 1.85rem; font-weight:700; color:var(--dark-color);">Bookmarked Festivals</h1>
+          <p style="color:var(--text-muted); font-size:0.95rem;">Track the directory listings you have saved for future celebrations.</p>
+        </div>
+        <div class="dashboard-user-profile">
+          <div class="dashboard-user-avatar" id="avatarName">FV</div>
+          <span style="font-weight:600; color:var(--dark-color);" id="usernameDisplay">visitor@stackly.com</span>
+        </div>
+      </header>
+
+      <!-- Bookmarked Listings Grid -->
+      <div class="responsive-grid-3 reveal-up active" style="margin-top: 1rem;">
+        
+        <!-- Pongal Card -->
+        <div class="hover-zoom-card" id="bookmarkPongal" style="background: white; border-radius: var(--border-radius); border: 1px solid var(--border-color); box-shadow: var(--shadow-sm); overflow: hidden; display: flex; flex-direction: column;">
+          <div style="overflow: hidden; height: 180px; position: relative;">
+            <img src="assets/Pongal.webp" alt="Pongal Festival" style="width: 100%; height: 100%; object-fit: cover;">
+            <div style="position: absolute; top: 1rem; right: 1rem; background: var(--secondary-color); color: var(--dark-color); font-weight: 700; font-size: 0.8rem; padding: 0.25rem 0.75rem; border-radius: 50px;">Harvest</div>
+          </div>
+          <div style="padding: 1.5rem; flex-grow: 1; display: flex; flex-direction: column; justify-content: space-between;">
+            <div>
+              <h3 style="font-size: 1.25rem; color: var(--primary-color); margin-bottom: 0.25rem;">Pongal</h3>
+              <p style="font-size: 0.8rem; color: var(--text-muted); margin-bottom: 1rem;"><i data-lucide="map-pin" style="width:12px; height:12px; vertical-align:middle;"></i> Tamil Nadu, India | January</p>
+              <p style="color: var(--text-color); font-size: 0.85rem; line-height: 1.6; margin-bottom: 1.5rem;">South Indian thanksgiving harvest festival celebrating crop bounty and boiling sweet rice.</p>
+            </div>
+            <div style="display: flex; gap: 1rem; align-items: center;">
+              <a href="404.html" class="nav-btn" style="padding: 0.5rem 1.25rem; font-size: 0.8rem; border-radius: 50px; flex-grow: 1; text-align: center;">View Details</a>
+              <button class="remove-btn" data-target="bookmarkPongal" data-name="Pongal" style="background: none; border: 1.5px solid var(--primary-color); color: var(--primary-color); padding: 0.5rem; border-radius: 50%; cursor: pointer; display: flex; align-items: center; justify-content: center; transition: var(--transition);"><i data-lucide="trash-2" style="width:16px; height:16px;"></i></button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Diwali Card -->
+        <div class="hover-zoom-card" id="bookmarkDiwali" style="background: white; border-radius: var(--border-radius); border: 1px solid var(--border-color); box-shadow: var(--shadow-sm); overflow: hidden; display: flex; flex-direction: column;">
+          <div style="overflow: hidden; height: 180px; position: relative;">
+            <img src="assets/Diwali.webp" alt="Diwali Festival" style="width: 100%; height: 100%; object-fit: cover;">
+            <div style="position: absolute; top: 1rem; right: 1rem; background: var(--secondary-color); color: var(--dark-color); font-weight: 700; font-size: 0.8rem; padding: 0.25rem 0.75rem; border-radius: 50px;">Religious</div>
+          </div>
+          <div style="padding: 1.5rem; flex-grow: 1; display: flex; flex-direction: column; justify-content: space-between;">
+            <div>
+              <h3 style="font-size: 1.25rem; color: var(--primary-color); margin-bottom: 0.25rem;">Diwali</h3>
+              <p style="font-size: 0.8rem; color: var(--text-muted); margin-bottom: 1rem;"><i data-lucide="map-pin" style="width:12px; height:12px; vertical-align:middle;"></i> Global / India | November</p>
+              <p style="color: var(--text-color); font-size: 0.85rem; line-height: 1.6; margin-bottom: 1.5rem;">The magnificent festival of lights celebrating the spiritual victory of light over dark.</p>
+            </div>
+            <div style="display: flex; gap: 1rem; align-items: center;">
+              <a href="404.html" class="nav-btn" style="padding: 0.5rem 1.25rem; font-size: 0.8rem; border-radius: 50px; flex-grow: 1; text-align: center;">View Details</a>
+              <button class="remove-btn" data-target="bookmarkDiwali" data-name="Diwali" style="background: none; border: 1.5px solid var(--primary-color); color: var(--primary-color); padding: 0.5rem; border-radius: 50%; cursor: pointer; display: flex; align-items: center; justify-content: center; transition: var(--transition);"><i data-lucide="trash-2" style="width:16px; height:16px;"></i></button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Hanami Card -->
+        <div class="hover-zoom-card" id="bookmarkHanami" style="background: white; border-radius: var(--border-radius); border: 1px solid var(--border-color); box-shadow: var(--shadow-sm); overflow: hidden; display: flex; flex-direction: column;">
+          <div style="overflow: hidden; height: 180px; position: relative;">
+            <img src="assets/Navrathri.webp" alt="Hanami Festival" style="width: 100%; height: 100%; object-fit: cover;">
+            <div style="position: absolute; top: 1rem; right: 1rem; background: var(--secondary-color); color: var(--dark-color); font-weight: 700; font-size: 0.8rem; padding: 0.25rem 0.75rem; border-radius: 50px;">Seasonal</div>
+          </div>
+          <div style="padding: 1.5rem; flex-grow: 1; display: flex; flex-direction: column; justify-content: space-between;">
+            <div>
+              <h3 style="font-size: 1.25rem; color: var(--primary-color); margin-bottom: 0.25rem;">Hanami</h3>
+              <p style="font-size: 0.8rem; color: var(--text-muted); margin-bottom: 1rem;"><i data-lucide="map-pin" style="width:12px; height:12px; vertical-align:middle;"></i> Tokyo, Japan | March</p>
+              <p style="color: var(--text-color); font-size: 0.85rem; line-height: 1.6; margin-bottom: 1.5rem;">Enjoying the transient beauty of cherry blossom tree canopies during spring.</p>
+            </div>
+            <div style="display: flex; gap: 1rem; align-items: center;">
+              <a href="404.html" class="nav-btn" style="padding: 0.5rem 1.25rem; font-size: 0.8rem; border-radius: 50px; flex-grow: 1; text-align: center;">View Details</a>
+              <button class="remove-btn" data-target="bookmarkHanami" data-name="Hanami" style="background: none; border: 1.5px solid var(--primary-color); color: var(--primary-color); padding: 0.5rem; border-radius: 50%; cursor: pointer; display: flex; align-items: center; justify-content: center; transition: var(--transition);"><i data-lucide="trash-2" style="width:16px; height:16px;"></i></button>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Empty State Info (hidden initially) -->
+      <div id="emptyState" style="display:none; text-align:center; padding: 5rem 2rem; background: white; border-radius: var(--border-radius); border: 1px solid var(--border-color); box-shadow: var(--shadow-sm); margin-top:1rem;">
+        <i data-lucide="bookmark" style="width: 60px; height: 60px; color: var(--text-muted); margin-bottom: 1.5rem;"></i>
+        <h3 style="font-size: 1.5rem; margin-bottom: 0.5rem;">No Bookmarked Festivals</h3>
+        <p style="color:var(--text-muted); margin-bottom: 2rem;">Explore the festival directories and save listings you would love to visit!</p>
+        <a href="festivals.html" class="btn btn-primary" style="padding: 0.85rem 2rem; border-radius: 50px;">Find Festivals</a>
+      </div>
+
+    </main>
+  </div>
+
+  <!-- Sidebar Overlay -->
+  <div class="sidebar-overlay" id="sidebarOverlay"></div>
+
+  <!-- Scripts -->
+  <script src="main.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      // Session Validation
+      if (localStorage.getItem('stackly_logged_in') !== 'true') {
+        window.location.replace('login.html');
+      }
+
+      // Display User details from registration session
+      const registeredName = localStorage.getItem('stackly_registered_name') || 'Festival Visitor';
+      const userDisplay = document.getElementById('usernameDisplay');
+      const avatarName = document.getElementById('avatarName');
+      
+      if (userDisplay) userDisplay.innerText = registeredName;
+      if (avatarName) {
+        const initials = registeredName.split(' ').map(n => n[0]).join('').toUpperCase().substring(0,2);
+        avatarName.innerText = initials || 'FV';
+      }
+
+      // Handle bookmark deletions
+      const removeButtons = document.querySelectorAll('.remove-btn');
+      let bookmarkCount = removeButtons.length;
+
+      removeButtons.forEach(btn => {
+        btn.addEventListener('click', () => {
+          const targetId = btn.getAttribute('data-target');
+          const festivalName = btn.getAttribute('data-name');
+          const card = document.getElementById(targetId);
+          if (card) {
+            card.style.opacity = '0';
+            card.style.transform = 'scale(0.9)';
+            card.style.transition = 'all 0.3s ease';
+            setTimeout(() => {
+              card.remove();
+              bookmarkCount--;
+              showToast(`${festivalName} removed from Bookmarks`);
+              if (bookmarkCount === 0) {
+                document.getElementById('emptyState').style.display = 'block';
+              }
+            }, 300);
+          }
+        });
+      });
+
+      // Logout handler
+      const logoutLink = document.getElementById('logoutLink');
+      if (logoutLink) {
+        logoutLink.addEventListener('click', (e) => {
+          e.preventDefault();
+          localStorage.removeItem('stackly_logged_in');
+          localStorage.removeItem('stackly_user_role');
+          localStorage.removeItem('stackly_user_email');
+          window.location.replace('login.html');
+        });
+      }
+    });
+  </script>
+</body>
+</html>

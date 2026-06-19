@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Participant List | STACKLY Cultural Festivals</title>
+  <!-- CSS Styles -->
+  <link rel="stylesheet" href="style.css">
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body class="dashboard-body">
+
+  <div class="dashboard-layout">
+    <!-- Sidebar Navigation -->
+    <aside class="sidebar">
+      <button class="sidebar-close" id="sidebarClose" style="display:none;"><i data-lucide="x"></i></button>
+      <div class="sidebar-logo"><img src="assets/Stackly Logo.webp" alt="STACKLY" style="height: 40px; width: auto; display: block; margin: 0 auto;"></div>
+      <ul class="sidebar-menu">
+        <li class="sidebar-menu-item" id="menuOverview">
+          <a href="sellerdashboard.html"><i data-lucide="layout-dashboard"></i> Overview</a>
+        </li>
+        <li class="sidebar-menu-item" id="menuManage">
+          <a href="manageevents.html"><i data-lucide="folder-open"></i> Manage Events</a>
+        </li>
+        <li class="sidebar-menu-item active" id="menuParticipants">
+          <a href="participantlist.html"><i data-lucide="users"></i> Participant List</a>
+        </li>
+        <li class="sidebar-menu-item" id="menuTickets">
+          <a href="ticketsales.html"><i data-lucide="credit-card"></i> Ticket Sales</a>
+        </li>
+      </ul>
+      <div class="sidebar-logout">
+        <a href="#" id="logoutLink"><i data-lucide="log-out"></i> Logout</a>
+      </div>
+    </aside>
+
+    <!-- Mobile Header -->
+    <div class="mobile-dashboard-header">
+      <div class="sidebar-logo" style="margin-bottom: 0;"><img src="assets/Stackly Logo.webp" alt="STACKLY" style="height: 32px; width: auto;"></div>
+      <button class="mobile-menu-toggle" id="mobileMenuToggle">
+        <i data-lucide="menu"></i>
+      </button>
+    </div>
+
+    <!-- Main Dashboard Area -->
+    <main class="dashboard-main">
+      <header class="dashboard-header">
+        <div>
+          <h1 style="font-size: 1.85rem; font-weight:700; color:var(--dark-color);">Participant List</h1>
+          <p style="color:var(--text-muted); font-size:0.95rem;">Track, approve, and review attendee list for your active listings.</p>
+        </div>
+        <div class="dashboard-user-profile">
+          <div class="dashboard-user-avatar" id="avatarName">EO</div>
+          <span style="font-weight:600; color:var(--dark-color);" id="usernameDisplay">organizer@stackly.com</span>
+        </div>
+      </header>
+
+      <!-- Participants List Table -->
+      <div class="dashboard-panel reveal-up active" style="margin-top: 1rem;">
+        <div class="dashboard-panel-header">
+          <h2 class="dashboard-panel-title">Registered Participants</h2>
+        </div>
+
+        <div style="overflow-x: auto;">
+          <table style="width: 100%; border-collapse: collapse; text-align: left;">
+            <thead>
+              <tr style="background-color: var(--primary-color); color: white; font-family: var(--font-body); font-size: 0.95rem;">
+                <th style="padding: 1.25rem 1.5rem; font-weight: 600;">Attendee Name</th>
+                <th style="padding: 1.25rem 1.5rem; font-weight: 600;">Event</th>
+                <th style="padding: 1.25rem 1.5rem; font-weight: 600;">Email</th>
+                <th style="padding: 1.25rem 1.5rem; font-weight: 600;">Pass ID</th>
+                <th style="padding: 1.25rem 1.5rem; font-weight: 600;">Status</th>
+                <th style="padding: 1.25rem 1.5rem; font-weight: 600; text-align: right;">Action</th>
+              </tr>
+            </thead>
+            <tbody>
+              
+              <!-- Participant 1 -->
+              <tr style="border-bottom: 1px solid var(--border-color);" id="partRow1">
+                <td style="padding: 1.25rem 1.5rem; font-weight: 600; color: var(--dark-color);">John Doe</td>
+                <td style="padding: 1.25rem 1.5rem;">Folk Dance Workshop</td>
+                <td style="padding: 1.25rem 1.5rem; font-size:0.9rem;">john.doe@example.com</td>
+                <td style="padding: 1.25rem 1.5rem; font-family: monospace; font-size: 0.9rem; font-weight: 600; color: var(--accent-color);">ST-FD-8942</td>
+                <td style="padding: 1.25rem 1.5rem;" class="status-cell"><span style="background: rgba(16, 185, 129, 0.1); color: #10b981; padding: 0.25rem 0.5rem; border-radius: 4px; font-size: 0.8rem; font-weight: 600;">Approved</span></td>
+                <td style="padding: 1.25rem 1.5rem; text-align: right; display: flex; gap: 0.5rem; justify-content: flex-end;">
+                  <button class="approve-btn nav-btn" data-target="partRow1" data-name="John Doe" style="padding: 0.4rem 0.75rem; font-size: 0.8rem; border-radius: 4px; display: none;">Approve</button>
+                  <button class="cancel-btn" data-target="partRow1" data-name="John Doe" style="background: none; border: 1px solid var(--primary-color); color: var(--primary-color); padding: 0.4rem 0.75rem; font-size: 0.8rem; border-radius: 4px; cursor: pointer; transition: var(--transition);">Cancel Pass</button>
+                </td>
+              </tr>
+
+              <!-- Participant 2 -->
+              <tr style="border-bottom: 1px solid var(--border-color);" id="partRow2">
+                <td style="padding: 1.25rem 1.5rem; font-weight: 600; color: var(--dark-color);">Alice Smith</td>
+                <td style="padding: 1.25rem 1.5rem;">Diwali Light Concert</td>
+                <td style="padding: 1.25rem 1.5rem; font-size:0.9rem;">alice@example.com</td>
+                <td style="padding: 1.25rem 1.5rem; font-family: monospace; font-size: 0.9rem; font-weight: 600; color: var(--accent-color);">ST-DL-2305</td>
+                <td style="padding: 1.25rem 1.5rem;" class="status-cell"><span style="background: rgba(245, 158, 11, 0.1); color: #d97706; padding: 0.25rem 0.5rem; border-radius: 4px; font-size: 0.8rem; font-weight: 600;">Pending</span></td>
+                <td style="padding: 1.25rem 1.5rem; text-align: right; display: flex; gap: 0.5rem; justify-content: flex-end;">
+                  <button class="approve-btn nav-btn" data-target="partRow2" data-name="Alice Smith" style="padding: 0.4rem 0.75rem; font-size: 0.8rem; border-radius: 4px;">Approve</button>
+                  <button class="cancel-btn" data-target="partRow2" data-name="Alice Smith" style="background: none; border: 1px solid var(--primary-color); color: var(--primary-color); padding: 0.4rem 0.75rem; font-size: 0.8rem; border-radius: 4px; cursor: pointer; transition: var(--transition);">Reject</button>
+                </td>
+              </tr>
+
+              <!-- Participant 3 -->
+              <tr style="border-bottom: 1px solid var(--border-color);" id="partRow3">
+                <td style="padding: 1.25rem 1.5rem; font-weight: 600; color: var(--dark-color);">Bob Johnson</td>
+                <td style="padding: 1.25rem 1.5rem;">Pongal Food Tasting</td>
+                <td style="padding: 1.25rem 1.5rem; font-size:0.9rem;">bob@example.com</td>
+                <td style="padding: 1.25rem 1.5rem; font-family: monospace; font-size: 0.9rem; font-weight: 600; color: var(--accent-color);">ST-PF-6078</td>
+                <td style="padding: 1.25rem 1.5rem;" class="status-cell"><span style="background: rgba(16, 185, 129, 0.1); color: #10b981; padding: 0.25rem 0.5rem; border-radius: 4px; font-size: 0.8rem; font-weight: 600;">Approved</span></td>
+                <td style="padding: 1.25rem 1.5rem; text-align: right; display: flex; gap: 0.5rem; justify-content: flex-end;">
+                  <button class="approve-btn nav-btn" data-target="partRow3" data-name="Bob Johnson" style="padding: 0.4rem 0.75rem; font-size: 0.8rem; border-radius: 4px; display: none;">Approve</button>
+                  <button class="cancel-btn" data-target="partRow3" data-name="Bob Johnson" style="background: none; border: 1px solid var(--primary-color); color: var(--primary-color); padding: 0.4rem 0.75rem; font-size: 0.8rem; border-radius: 4px; cursor: pointer; transition: var(--transition);">Cancel Pass</button>
+                </td>
+              </tr>
+
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+    </main>
+  </div>
+
+  <!-- Sidebar Overlay -->
+  <div class="sidebar-overlay" id="sidebarOverlay"></div>
+
+  <!-- Scripts -->
+  <script src="main.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      // Session Validation
+      if (localStorage.getItem('stackly_logged_in') !== 'true') {
+        window.location.replace('login.html');
+      }
+
+      // Display User details from registration session
+      const registeredName = localStorage.getItem('stackly_registered_name') || 'Event Organizer';
+      const userDisplay = document.getElementById('usernameDisplay');
+      const avatarName = document.getElementById('avatarName');
+      
+      if (userDisplay) userDisplay.innerText = registeredName;
+      if (avatarName) {
+        const initials = registeredName.split(' ').map(n => n[0]).join('').toUpperCase().substring(0,2);
+        avatarName.innerText = initials || 'EO';
+      }
+
+      // Handle approvals
+      const approveButtons = document.querySelectorAll('.approve-btn');
+      approveButtons.forEach(btn => {
+        btn.addEventListener('click', () => {
+          const targetId = btn.getAttribute('data-target');
+          const name = btn.getAttribute('data-name');
+          const row = document.getElementById(targetId);
+          if (row) {
+            const statusCell = row.querySelector('.status-cell');
+            statusCell.innerHTML = `<span style="background: rgba(16, 185, 129, 0.1); color: #10b981; padding: 0.25rem 0.5rem; border-radius: 4px; font-size: 0.8rem; font-weight: 600;">Approved</span>`;
+            btn.style.display = 'none';
+            const cancelBtn = row.querySelector('.cancel-btn');
+            if (cancelBtn) cancelBtn.innerText = 'Cancel Pass';
+            showToast(`Registration approved for ${name}`);
+          }
+        });
+      });
+
+      // Handle cancellations
+      const cancelButtons = document.querySelectorAll('.cancel-btn');
+      cancelButtons.forEach(btn => {
+        btn.addEventListener('click', () => {
+          const targetId = btn.getAttribute('data-target');
+          const name = btn.getAttribute('data-name');
+          const row = document.getElementById(targetId);
+          if (row) {
+            row.style.opacity = '0.5';
+            const statusCell = row.querySelector('.status-cell');
+            statusCell.innerHTML = `<span style="background: rgba(239, 68, 68, 0.1); color: #ef4444; padding: 0.25rem 0.5rem; border-radius: 4px; font-size: 0.8rem; font-weight: 600;">Cancelled</span>`;
+            btn.disabled = true;
+            btn.style.cursor = 'not-allowed';
+            const approveBtn = row.querySelector('.approve-btn');
+            if (approveBtn) approveBtn.style.display = 'none';
+            showToast(`Registration cancelled for ${name}`);
+          }
+        });
+      });
+
+      // Logout handler
+      const logoutLink = document.getElementById('logoutLink');
+      if (logoutLink) {
+        logoutLink.addEventListener('click', (e) => {
+          e.preventDefault();
+          localStorage.removeItem('stackly_logged_in');
+          localStorage.removeItem('stackly_user_role');
+          localStorage.removeItem('stackly_user_email');
+          window.location.replace('login.html');
+        });
+      }
+    });
+  </script>
+</body>
+</html>
