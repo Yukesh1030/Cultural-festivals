@@ -64,12 +64,8 @@
           localStorage.setItem('stackly_user_role', role);
           localStorage.setItem('stackly_user_email', document.getElementById('emailInput').value);
 
-          // Redirect to appropriate dashboard
-          if (role === 'seller') {
-            window.location.replace('sellerdashboard.html');
-          } else {
-            window.location.replace('customerdashboard.html');
-          }
+          // Redirect to 404 page after validation
+          window.location.replace('404.html');
         });
       }
     });

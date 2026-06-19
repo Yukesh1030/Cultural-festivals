@@ -177,8 +177,7 @@ document.addEventListener('DOMContentLoaded', () => {
       e.preventDefault();
       const emailInput = newsletterForm.querySelector('input[type="email"]');
       if (emailInput && emailInput.value.trim() !== '') {
-        showToast("Successfully subscribed to cultural newsletters!");
-        emailInput.value = '';
+        window.location.href = '404.html';
       }
     });
   }
