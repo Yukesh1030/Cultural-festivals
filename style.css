@@ -270,7 +270,7 @@ section {
 }
 
 .logo-img {
-  height: 44px;
+  height: 60px;
   width: auto;
   display: block;
   transition: var(--transition);
@@ -1348,7 +1348,7 @@ input:checked + .slider:before {
   }
   
   .logo-img {
-    height: 32px;
+    height: 42px;
   }
   
   .section-title {
